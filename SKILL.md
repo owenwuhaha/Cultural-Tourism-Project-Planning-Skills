@@ -1,7 +1,7 @@
 ---
 name: cultural-tourism-planner
 description: "文旅策划规划助手 — 面向文旅策划师/景区规划人员/政府文旅部门的专业辅助技能，提供从资源盘点、市场分析到投资测算的全流程策划支持。集成八大知识库维度：政策法规、策划方法论、规划体系、农文旅融合、康养疗愈、运营升级、商业模式、行业趋势。"
-version: 2.3.0
+version: 2.4.0
 author: 疯狂的豇豆 (crazyowen)
 category: productivity
 license: MIT
@@ -630,8 +630,9 @@ metadata:
 || **V2.1** | **自动策划脚本(generate-plan.py) + 圈层热力图(catchment-heatmap.py)** | ✅ **已完成** |
 || **V2.2** | **策划工具箱总控台(planner-toolkit.py) + SVG功能分区图生成器(svg-zoning.py)** | ✅ **已完成** |
 || **V2.3** | **竞品对标分析工具(competitive-analysis.py) — 6维雷达图+竞争力矩阵+SWOT** | ✅ **已完成** |
-|| V2.4 | 接入地图API，自动生成圈层热力图（增强版 + 真实地图） | 🔜 规划中 |
-|| V2.5 | 知识库动态查询（按需加载wenlv-wiki） | 🔜 规划中 |
+|| **V2.4** | **项目总览看板(project-dashboard.py) — 自动扫描聚合所有报告** | ✅ **已完成** |
+|| V2.5 | 接入地图API，自动生成圈层热力图（增强版 + 真实地图） | 🔜 规划中 |
+|| V2.6 | 知识库动态查询（按需加载wenlv-wiki） | 🔜 规划中 |
 || V3.0 | GIS系统集成 + 增强SVG分区图 | 🔜 规划中 |
 
 ---
@@ -655,6 +656,7 @@ metadata:
       ├── generate-plan.py            # 自动策划脚本(V2.1 新增)
       ├── catchment-heatmap.py        # 圈层热力图生成(V2.1 新增)
       ├── competitive-analysis.py     # 竞品对标分析(V2.3 新增)
+      ├── project-dashboard.py        # 项目总览看板(V2.4 新增)
       ├── planner-toolkit.py          # 策划工具箱总控台(V2.2 新增)
       └── svg-zoning.py               # SVG功能分区图生成(V2.2 新增)
   ```
