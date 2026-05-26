@@ -19,6 +19,7 @@ SCRIPTS = [
     ("generate-plan.py",   "📊 自动策划方案"),
     ("investment-calc.py", "📈 投资测算工具"),
     ("catchment-heatmap.py","🌐 客源圈层热力图"),
+    ("competitive-analysis.py", "📊 竞品对标分析"),
     ("svg-zoning.py",      "🗺️ SVG功能分区图"),
 ]
 
