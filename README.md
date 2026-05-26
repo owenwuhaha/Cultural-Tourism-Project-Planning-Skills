@@ -1,8 +1,8 @@
 <div align="center">
 
-# 🏔️ Cultural Tourism Planner
+# 🏔️ 文旅策划规划助手
 
-**文旅策划规划助手 — AI-Powered Planning Assistant**
+**Cultural Tourism Project Planning Skills**
 
 [![Hermes Skill](https://img.shields.io/badge/Hermes-Skill-8A2BE2)](https://hermes-agent.nousresearch.com)
 [![Version](https://img.shields.io/badge/version-1.0.0-blue)](./SKILL.md)
@@ -10,7 +10,7 @@
 [![Category](https://img.shields.io/badge/category-productivity-orange)](.)
 [![Platform](https://img.shields.io/badge/platform-linux%20%7C%20macos%20%7C%20windows-lightgrey)](.)
 
-> **Cut planning time from 3 days to 3 hours** — AI-powered cultural tourism planning that lets planners focus on creativity, not paperwork.
+> **把策划时间从3天压缩到3小时** — 面向一线文旅策划师的 AI 辅助工具，让规划师专注于创意，而非文书。
 
 </div>
 
@@ -18,141 +18,17 @@
 
 <div align="center">
 
-[**🇬🇧 English**](#-english) · [**🇨🇳 中文**](#-中文文档)
+[**🇨🇳 中文**](#-文旅策划规划助手) · [**🇬🇧 English**](./README.en.md)
 
 </div>
 
 ---
-
-# 🇬🇧 English
-
-## 📖 Overview
-
-**Cultural Tourism Planner** is a professional AI-powered planning assistant for the cultural tourism industry, built for the Hermes Agent ecosystem.
-
-It simulates a **registered cultural tourism planner with 10+ years of experience**, adhering to China's *Tourism Planning General Code* (GB/T 18971-2003). It approaches every project from the **client/investor's perspective**, focusing on ROI and practical feasibility.
-
-### Core Principles
-
-| Principle | Description |
-|-----------|-------------|
-| 🎭 **Role-Play + Methodology + CoT** | Guided analysis framework simulating a senior planner's thinking |
-| ❓ **Ask Before Fabricate** | Always ask the user when information is insufficient — never make up data |
-| 📊 **Data with Sources** | All estimates labeled as "industry reference range" or "rough estimate" |
-| 🛡️ **Compliance First** | Never bypass fire safety, environmental, or land-use regulations |
-
-## 🎯 Target Users
-
-| Role | Use Case |
-|------|----------|
-| 👷 **Tourism Planners** | Rapid framework generation, product mix design, preliminary financial modeling |
-| 🗺️ **Scenic Area Operators** | Resource assessment, visitor flow planning, spatial layout, capacity estimation |
-| 🏛️ **Government Tourism Departments** | Rural revitalization planning, A-level scenic area certification, feasibility studies |
-| 💼 **Consultants** | Market analysis, competitive benchmarking, business plans, financial projections |
-
-## 🧩 Core Modules
-
-| # | Module | Features | Output |
-|---|--------|----------|--------|
-| 1 | **Resource Assessment** | 5-dimension classification, SWOT matrix, competitive benchmarking, rarity scoring | Structured resource inventory + SWOT analysis |
-| 2 | **Market & Audience Analysis** | Radius analysis, persona generation, trend matching, differentiation advice | Personas + market size estimate |
-| 3 | **Theme & IP Planning** | Cultural deconstruction, theme direction generation, slogan creation, micro-scripts | 3-5 theme directions + brand slogan |
-| 4 | **Spatial Layout & Flow Planning** | Layout mode recommendation, visitor flow simulation, capacity estimation, zone ratio | Functional zones + flow description |
-| 5 | **Product Mix Planning** | Asset-light/heavy recommendations, night economy solutions | Product mix table + item list |
-| 6 | **Financial Modeling & Risk Assessment** | Investment estimation, revenue forecast, payback period, risk analysis | Financial model + risk report |
-| 7 | **Report Generation** | 10 structured templates for different project types | Markdown-format planning document |
-
-### 10 Built-in Report Templates
-
-| # | Report Type |
-|---|-------------|
-| 1 | 📋 Scenic Area Upgrade Plan |
-| 2 | 🌾 Rural Revitalization Tourism Plan |
-| 3 | 🏖️ Resort Development Plan |
-| 4 | 🎒 Study Base (研学基地) Plan |
-| 5 | 💰 Business Plan (Tourism Projects) |
-| 6 | 📑 Feasibility Study Report Outline |
-| 7 | 🏆 A-Level Scenic Area Certification Plan |
-| 8 | 🌃 Night Economy Project Plan |
-| 9 | 🏥 Wellness & Healthcare Resort Plan |
-| 10 | 🏭 Industrial Tourism Transformation Plan |
-
-## 🚀 How to Trigger
-
-### Intent Recognition
-
-Simply say or type:
-
-```
-Create a scenic area plan for me
-Analyze if this village is suitable for tourism
-Write a cultural tourism planning proposal
-Calculate the investment return
-```
-
-### Quick Commands
-
-| Command | Function |
-|---------|----------|
-| `/plan` | Full planning workflow |
-| `/swot` | SWOT Analysis |
-| `/calculate` | Investment calculation |
-| `/report` | Generate report |
-
-### File Upload
-
-Supports: research reports, photos, Excel spreadsheets, CAD sketches — the AI automatically parses the content.
-
-## ⚡ Quick Start
-
-```bash
-# Trigger a full planning workflow
-/plan
-
-# Or directly describe your project
-> I want to plan rural tourism for a 1000-mu lakeside village, 
-> 1.5 hours from the provincial capital, with farmland and ancient trees
-```
-
-The AI will automatically run through the complete workflow: **Resource Inventory → Market Positioning → Theme Extraction → Spatial Flow → Financial Analysis**.
-
-## 📊 Reference Data
-
-The skill includes extensive industry reference data:
-
-| File | Content |
-|------|---------|
-| [`references/industry-data.md`](./references/industry-data.md) | Industry standards, investment thresholds, pricing, gross margins, market data, policy trends |
-| [`references/report-templates.md`](./references/report-templates.md) | 10 complete planning report templates |
-| [`scripts/investment_calc.py`](./scripts/investment_calc.py) | Investment calculation Python script |
-
-## 🗺️ Roadmap
-
-| Version | Features | Status |
-|---------|----------|--------|
-| V1.0 | 7 core modules + report generation + questioning mechanism | ✅ Complete |
-| V1.1 | Map API integration, automatic heatmap generation | 🔜 Planned |
-| V1.2 | Competitor case library (500+ projects) | 🔜 Planned |
-| V1.3 | Multi-modal support (hand-drawn sketch → functional zoning) | 🔜 Planned |
-| V2.0 | GIS integration, editable vector layout output | 🔜 Planned |
-
----
-
-<div align="right">
-
-[⬆ Back to top](#-) · [🇨🇳 切换到中文](#-中文文档)
-
-</div>
-
----
-
-# 🇨🇳 中文文档
 
 ## 📖 概述
 
-**文旅策划规划助手** 是一个面向文旅行业的专业 AI 辅助技能，为 Hermes Agent 生态系统打造。
+**文旅策划规划助手** 是一个面向文旅行业的专业 AI 辅助技能，为 [Hermes Agent](https://hermes-agent.nousresearch.com) 生态系统打造。
 
-它模拟一位拥有 **10年以上经验** 的注册文旅规划师，遵循《旅游规划��则》(GB/T 18971-2003)，从 **甲方视角** 关注投资回报和落地性。
+它模拟一位拥有 **10年以上经验** 的注册文旅规划师，遵循《旅游规划通则》(GB/T 18971-2003)，从 **甲方视角** 关注投资回报和落地性。
 
 ### 核心原则
 
@@ -232,7 +108,8 @@ The skill includes extensive industry reference data:
 /plan
 
 # 或者直接输入需求
-> 我想为一个1000亩的滨水村庄做乡村旅游策划，距离省会城市1.5小时车程，有农田和古树资源
+> 我想为一个1000亩的滨水村庄做乡村旅游策划，
+> 距离省会城市1.5小时车程，有农田和古树资源
 ```
 
 AI 会自动启动 **资源盘点 → 市场定位 → 主题提炼 → 空间动线 → 投资算账** 的全流程分析。
@@ -255,16 +132,6 @@ AI 会自动启动 **资源盘点 → 市场定位 → 主题提炼 → 空间�
 | V1.3 | 多模态支持（手绘草图→功能分区图） | 🔜 规划中 |
 | V2.0 | 接入GIS系统，输出可编辑的矢量布局图 | 🔜 规划中 |
 
----
-
-<div align="right">
-
-[⬆ 回到顶部](#-) · [🇬🇧 Switch to English](#-english)
-
-</div>
-
----
-
 ## 📄 License
 
 MIT © 2025 [吴晓 (crazyowen)](https://github.com/crazyowen)
@@ -273,9 +140,8 @@ MIT © 2025 [吴晓 (crazyowen)](https://github.com/crazyowen)
 
 <div align="center">
 
-**Built by a practitioner, for practitioners.**  
-由一线策划师打造，为一线策划师服务。
+**由一线策划师打造，为一线策划师服务。**
 
-[Report Issue](https://github.com/crazyowen/cultural-tourism-planner/issues) · [Request Feature](https://github.com/crazyowen/cultural-tourism-planner/issues)
+[报告问题](https://github.com/owenwuhaha/Cultural-Tourism-Project-Planning-Skills/issues) · [功能建议](https://github.com/owenwuhaha/Cultural-Tourism-Project-Planning-Skills/issues)
 
 </div>

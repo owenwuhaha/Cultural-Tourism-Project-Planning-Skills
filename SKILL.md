@@ -418,7 +418,8 @@ cultural-tourism-planner/
 │   └── report-templates.md # 报告模板库
 ├── scripts/
 │   └── investment-calc.py # 投资测算辅助脚本
-└── README.md              # 项目说明
+├── README.md              # 项目说明（中文默认）
+├── README.en.md           # 项目说明（英文版）
 ```
 
 ### 使用示例
