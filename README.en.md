@@ -5,6 +5,9 @@
 **AI-Powered Cultural Tourism Project Planning Skills**
 
 [![Hermes Skill](https://img.shields.io/badge/Hermes-Skill-8A2BE2)](https://hermes-agent.nousresearch.com)
+[![OpenClaw](https://img.shields.io/badge/OpenClaw-Skill-ff6b6b)](https://github.com/owenwuhaha/Cultural-Tourism-Project-Planning-Skills)
+[![Claude Code](https://img.shields.io/badge/Claude%20Code-Ready-9775fa)](https://claude.ai)
+[![Codex](https://img.shields.io/badge/Codex-Ready-4ade80)](https://codex.openai.com)
 [![Version](https://img.shields.io/badge/version-1.0.0-blue)](./SKILL.md)
 [![License](https://img.shields.io/badge/license-MIT-green)](./LICENSE)
 [![Category](https://img.shields.io/badge/category-productivity-orange)](.)
@@ -26,7 +29,7 @@
 
 ## 📖 Overview
 
-**Cultural Tourism Planner** is a professional AI-powered planning assistant for the cultural tourism industry, built for the [Hermes Agent](https://hermes-agent.nousresearch.com) ecosystem.
+**Cultural Tourism Planner** is a professional AI-powered planning assistant for the cultural tourism industry, compatible with multiple AI Agent platforms.
 
 It simulates a **registered cultural tourism planner with 10+ years of experience**, adhering to China's *Tourism Planning General Code* (GB/T 18971-2003). It approaches every project from the **client/investor's perspective**, focusing on ROI and practical feasibility.
 
@@ -113,6 +116,94 @@ Supports: research reports, photos, Excel spreadsheets, CAD sketches — the AI 
 ```
 
 The AI will automatically run through the complete workflow: **Resource Inventory → Market Positioning → Theme Extraction → Spatial Flow → Financial Analysis**.
+
+## 🔌 Multi-Platform Installation
+
+This skill works across multiple AI Agent platforms. Choose the one that fits your workflow:
+
+### 🤖 Hermes Agent
+
+Install as a native Hermes Skill:
+
+```bash
+# Install from local directory
+hermes skill install /path/to/cultural-tourism-planner
+
+# Install from GitHub
+hermes skill install https://github.com/owenwuhaha/Cultural-Tourism-Project-Planning-Skills
+```
+
+Once installed, trigger it naturally in conversation (e.g., "Create a scenic area plan for me").
+
+### 🐾 OpenClaw
+
+OpenClaw supports loading SKILL.md-format skill files natively.
+
+**Method 1: Import skill directory**
+```bash
+# Clone the repo
+git clone https://github.com/owenwuhaha/Cultural-Tourism-Project-Planning-Skills.git
+
+# Load via OpenClaw's skill command
+openclaw skill load ./Cultural-Tourism-Project-Planning-Skills
+```
+
+**Method 2: Manual copy**
+Copy `SKILL.md`, `references/`, and `scripts/` into your OpenClaw skill directory.
+
+### 💬 Claude Code (Anthropic)
+
+**Method 1: Project Instructions (Recommended)**
+
+Add the following to your `CLAUDE.md` or project instructions:
+
+```markdown
+## Cultural Tourism Planner
+
+You have expertise in cultural tourism planning. Follow these principles:
+- Role-play as a senior planner with 10+ years experience
+- Ask before fabricating — always question when info is insufficient
+- Cite data sources, never fabricate regulated information
+- Stay compliant with all regulations
+
+### Required Workflow (internal reasoning order)
+1. Resource Inventory → 2. Market Positioning → 3. Theme Extraction → 4. Spatial Flow → 5. Financial Analysis
+```
+
+**Method 2: Activate in conversation**
+
+In any Claude Code session, simply say:
+> Act as a cultural tourism planner. Follow the 5-step workflow (resources → market → theme → flow → finance) to plan a project for me.
+
+### ✨ Codex (OpenAI)
+
+**Method 1: System Prompt**
+
+Add this to your Codex Instructions or system prompt:
+
+```markdown
+You are a registered cultural tourism planner with 10+ years of experience.
+Follow this workflow for every project:
+1. Resource Inventory — what resources does the site have?
+2. Market Positioning — who will visit and why?
+3. Theme Extraction — what's the unique story?
+4. Spatial Flow — how do visitors move and spend?
+5. Financial Analysis — can the client make money?
+Ask questions when info is insufficient. Never fabricate data. Stay compliant with regulations.
+```
+
+**Method 2: File reference**
+
+Add `references/industry-data.md` as a project context file in your Codex project.
+
+### 📋 Platform Comparison
+
+| Platform | Installation | Recommendation |
+|----------|-------------|----------------|
+| 🟣 **Hermes Agent** | `hermes skill install` — one command | ⭐ Native |
+| 🟠 **OpenClaw** | Import SKILL.md directory | ⭐ Fully Compatible |
+| 🟢 **Claude Code** | CLAUDE.md project instructions | ✅ Manual Setup |
+| 🔵 **Codex (OpenAI)** | System Prompt configuration | ✅ Manual Setup |
 
 ## 📊 Reference Data
 

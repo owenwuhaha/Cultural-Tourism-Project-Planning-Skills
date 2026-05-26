@@ -5,6 +5,9 @@
 **Cultural Tourism Project Planning Skills**
 
 [![Hermes Skill](https://img.shields.io/badge/Hermes-Skill-8A2BE2)](https://hermes-agent.nousresearch.com)
+[![OpenClaw](https://img.shields.io/badge/OpenClaw-Skill-ff6b6b)](https://github.com/owenwuhaha/Cultural-Tourism-Project-Planning-Skills)
+[![Claude Code](https://img.shields.io/badge/Claude%20Code-Ready-9775fa)](https://claude.ai)
+[![Codex](https://img.shields.io/badge/Codex-Ready-4ade80)](https://codex.openai.com)
 [![Version](https://img.shields.io/badge/version-1.0.0-blue)](./SKILL.md)
 [![License](https://img.shields.io/badge/license-MIT-green)](./LICENSE)
 [![Category](https://img.shields.io/badge/category-productivity-orange)](.)
@@ -26,7 +29,7 @@
 
 ## 📖 概述
 
-**文旅策划规划助手** 是一个面向文旅行业的专业 AI 辅助技能，为 [Hermes Agent](https://hermes-agent.nousresearch.com) 生态系统打造。
+**文旅策划规划助手** 是一个面向文旅行业的专业 AI 辅助技能，支持在多个 AI Agent 平台上运行。
 
 它模拟一位拥有 **10年以上经验** 的注册文旅规划师，遵循《旅游规划通则》(GB/T 18971-2003)，从 **甲方视角** 关注投资回报和落地性。
 
@@ -67,7 +70,7 @@
 | 1 | 📋 景区提升规划方案 |
 | 2 | 🌾 乡村振兴旅游策划方案 |
 | 3 | 🏖️ 度假区策划方案 |
-| 4 | 🎒 研学基地策划方案 |
+| 4 | 🎒 研学基地策划方��� |
 | 5 | 💰 商业计划书（文旅项目） |
 | 6 | 📑 可行性研究报告大纲 |
 | 7 | 🏆 A级景区创建方案 |
@@ -113,6 +116,95 @@
 ```
 
 AI 会自动启动 **资源盘点 → 市场定位 → 主题提炼 → 空间动线 → 投资算账** 的全流程分析。
+
+## 🔌 多平台安装与使用
+
+本技能支持以下 AI Agent 平台，您可根据自身环境选择使用方式：
+
+### 🤖 Hermes Agent
+
+将本仓库安装为 Hermes Skill：
+
+```bash
+# 从本地目录安装
+hermes skill install /path/to/cultural-tourism-planner
+
+# 从 GitHub 安装
+hermes skill install https://github.com/owenwuhaha/Cultural-Tourism-Project-Planning-Skills
+```
+
+安装后，在对话中直接输入需求即可触发（如"帮我做个景区规划"）。
+
+### 🐾 OpenClaw
+
+OpenClaw 支持加载 SKILL.md 格式的技能文件。
+
+**方法一：导入技能目录**
+```bash
+# 克隆仓库到本地
+git clone https://github.com/owenwuhaha/Cultural-Tourism-Project-Planning-Skills.git
+
+# 在 OpenClaw 配置中指向该技能目录
+# 或通过 OpenClaw 的 skill 加载命令
+openclaw skill load ./Cultural-Tourism-Project-Planning-Skills
+```
+
+**方法二：手动复制**
+将 `SKILL.md` 及 `references/`、`scripts/` 目录复制到 OpenClaw 的技能目录下即可。
+
+### 💬 Claude Code (Anthropic)
+
+**方法一：Project Instructions（推荐）**
+
+将项目中的提示词模板添加到 Claude Code 的项目指令中。在 Claude Code 的 `CLAUDE.md` 或项目设置中添加如下指令：
+
+```markdown
+## 文旅策划助手
+
+你拥有文旅策划规划的专业能力，遵循以下原则：
+- 角色扮演一位10年以上经验注册文旅规划师
+- 追问优先于编造，信息不足时必须追问
+- 数据有源，禁止编造法定红线信息
+- 合规第一
+
+### 工作流程（内部必须按此顺序思考）
+1. 资源盘点 → 2. 市场定位 → 3. 主题提炼 → 4. 空间动线 → 5. 投资算账
+```
+
+**方法二：对话中直接激活**
+
+在 Claude Code 会话中输入：
+> 请以文旅策划规划师身份，按五步工作流（资源-市场-主题-动线-投资）帮我策划一个项目
+
+### ✨ Codex (OpenAI)
+
+**方法一：System Prompt**
+
+在 Codex 的 Instructions 或 system prompt 中添加以下角色设定：
+
+```markdown
+You are a registered cultural tourism planner with 10+ years of experience.
+Follow this workflow for every project:
+1. Resource Inventory — what resources does the site have?
+2. Market Positioning — who will visit and why?
+3. Theme Extraction — what's the unique story?
+4. Spatial Flow — how do visitors move and spend?
+5. Financial Analysis — can the client make money?
+Ask questions when info is insufficient. Never fabricate data. Stay compliant with regulations.
+```
+
+**方法二：文件引用**
+
+将 `references/industry-data.md` 作为项目上下文文件添加到 Codex 项目中。当需要策划时，直接描述需求即可。
+
+### 📋 平台对比
+
+| 平台 | 安装方式 | 推荐程度 |
+|------|---------|---------|
+| 🟣 **Hermes Agent** | `hermes skill install` 一键安装 | ⭐ 原生支持 |
+| 🟠 **OpenClaw** | 导入 SKILL.md 目录 | ⭐ 完全兼容 |
+| 🟢 **Claude Code** | CLAUDE.md 项目指令 | ✅ 手动配置 |
+| 🔵 **Codex (OpenAI)** | System Prompt 设定 | ✅ 手动配置 |
 
 ## 📊 参考数据
 
