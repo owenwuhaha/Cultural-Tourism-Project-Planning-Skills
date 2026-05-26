@@ -8,10 +8,10 @@
 [![OpenClaw](https://img.shields.io/badge/OpenClaw-Skill-ff6b6b)](https://github.com/owenwuhaha/Cultural-Tourism-Project-Planning-Skills)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-Ready-9775fa)](https://claude.ai)
 [![Codex](https://img.shields.io/badge/Codex-Ready-4ade80)](https://codex.openai.com)
-[![Version](https://img.shields.io/badge/version-2.1.0-blue)](./SKILL.md)
-[![License](https://img.shields.io/badge/license-MIT-green)](./LICENSE)
-[![Category](https://img.shields.io/badge/category-productivity-orange)](.)
-[![Platform](https://img.shields.io/badge/platform-linux%20%7C%20macos%20%7C%20windows-lightgrey)](.)
+[![版本](https://img.shields.io/badge/版本-V2.6-blue)](./SKILL.md)
+[![许可](https://img.shields.io/badge/许可-MIT-green)](./LICENSE)
+[![分类](https://img.shields.io/badge/分类-生产力-orange)](.)
+[![平台](https://img.shields.io/badge/平台-linux%20%7C%20macos%20%7C%20windows-lightgrey)](.)
 
 > **把策划时间从3天压缩到3小时** — 面向一线文旅策划师的 AI 辅助工具，让规划师专注于创意，而非文书。
 
@@ -46,7 +46,7 @@
 | 🎭 **角色扮演 + 方法论植入 + 思维链** | 以资深规划师的思维框架引导每一步分析 |
 | ❓ **追问优先于编造** | 信息不足时追问用户，绝不胡编乱造 |
 | 📊 **数据有源** | 所有估算数据标注为"行业参考范围"或"粗略估算" |
-| 🛡️ **合规第一** | 不绕过消防、环保、国土等任何合规要求 |
+| 🛡️ **合规第一** | 不绕过消防、环保、国土等任何合规要��� |
 
 ## 🎯 适用人群
 
@@ -69,7 +69,7 @@
 | 6 | **投资测算与风险评估** | 投资估算、三情景收入预测、回收期分析 |
 | 7 | **规范报告生成** | 15种结构化模板，学术化转译功能 |
 | 8 | **商业模式设计** | 5层收入结构模型、全生命周期盈利策略 |
-| 9 | **沉浸式文旅与情绪价值** | 文旅3.0进化模型、六大情绪赛道、五感设计 |
+| 9 | **沉浸式文旅与情���价值** | 文旅3.0进化模型、六大情绪赛道、五感设计 |
 | 10 | **农文旅融合模式** | 四大发展形态、六大融合模式速查 |
 | 11 | **康养疗愈旅游** | 五大融合模式、百万亿市场分析 |
 | 12 | **政策资金申报** | 八大资金通道、申报流程、六大红线 |
@@ -155,7 +155,7 @@ hermes skill install https://github.com/owenwuhaha/Cultural-Tourism-Project-Plan
 
 ### 🐾 OpenClaw
 
-OpenClaw 支持加载 SKILL.md 格式的技能文件。
+OpenClaw 支持加载 SKILL.md ���式的技能文件。
 
 **方法一：导入技能目录**
 ```bash
@@ -168,9 +168,9 @@ openclaw skill load ./Cultural-Tourism-Project-Planning-Skills
 
 ### 💬 Claude Code (Anthropic)
 
-**方法一：Project Instructions（推荐）**
+**方法一：项目指令（推荐）**
 
-将项目中的提示词模板添加到 Claude Code 的项目指令中。在 `CLAUDE.md` 或项目设置中添加：
+在 `CLAUDE.md` 或项目设置中添加：
 
 ```markdown
 ## 文旅策划助手
@@ -192,7 +192,7 @@ openclaw skill load ./Cultural-Tourism-Project-Planning-Skills
 
 ### ✨ Codex (OpenAI)
 
-**方法一：System Prompt**
+**方法一：系统提示词**
 
 在 Codex 的 Instructions 或 system prompt 中添加：
 
@@ -222,7 +222,7 @@ Ask questions when info is insufficient. Never fabricate data. Stay compliant.
 
 ## 🛠️ 配套工具脚本
 
-本仓库提供了8个可直接运行的 Python 工具脚本：
+本仓库提供了 8 个可直接运行的 Python 工具脚本：
 
 | 脚本 | 版本 | 功能描述 | 用法 |
 |------|------|---------|------|
@@ -249,20 +249,27 @@ Ask questions when info is insufficient. Never fabricate data. Stay compliant.
 ```
 Cultural-Tourism-Project-Planning-Skills/
 ├── SKILL.md                       # 技能定义（14大模块 V2.6）
-├── README.md                      # 中文默认README（默认呈现中文版）
-├── README.en.md                   # 英文版README（通过切换链接访问）
+├── README.md                      # 中文自述文件（默认显示）
+├── README.en.md                   # 英文自述文件（通过切换链接访问）
+├── RELEASE_NOTES.md               # 版本发布说明（中英双语）
 ├── references/                    # 行业数据 + 报告模板
 │   ├── industry-data.md           # 行业标准与参考数据（284行）
 │   └── report-templates.md        # 15种策划报告模板（975行）
-└── scripts/                       # 可运行工具脚本
-    ├── knowledge-query.py           # 知识库动态查询（V2.5 新增）
-    ├── project-dashboard.py         # 项目总览看板（V2.4）
-    ├── competitive-analysis.py      # 竞品对标分析（V2.3）
-    ├── planner-toolkit.py           # 策划工具箱总控台（V2.2）
-    ├── svg-zoning.py                # SVG功能分区图生成（V2.2）
-    ├── generate-plan.py             # 自动策划脚本（V2.1）
-    ├── catchment-heatmap.py         # 圈层热力图生成（V2.6）
-    └── investment-calc.py           # 投资测算工具（V2.0）
+├── scripts/                       # 可运行工具脚本
+│   ├── knowledge-query.py         # 知识库动态查询（V2.5）
+│   ├── project-dashboard.py       # 项目总览看板（V2.4）
+│   ├── competitive-analysis.py    # 竞品对标分析（V2.3）
+│   ├── planner-toolkit.py         # 策划工具箱总控台（V2.2）
+│   ├── svg-zoning.py              # SVG功能分区图生成（V2.2）
+│   ├── generate-plan.py           # 自动策划脚本（V2.1）
+│   ├── catchment-heatmap.py       # 圈层热力图生成（V2.6）
+│   └── investment-calc.py         # 投资测算工具（V2.0）
+└── landing/                       # 宣传素材
+    ├── index.html                 # 动效宣传落地页
+    ├── banner-728x200.html        # 广告横幅源码
+    ├── banner-728x200.png         # 广告横幅图片
+    ├── wordpress-page-content.html # WordPress 页面内容
+    └── wordpress-page-mobile.html  # 移动端优化版
 ```
 
 ## 🗺️ 版本规划
@@ -280,7 +287,7 @@ Cultural-Tourism-Project-Planning-Skills/
 | V2.7 | 接入地图API增强 | 🔜 规划中 |
 | V3.0 | GIS系统集成 + 增强SVG分区图 | 🔜 规划中 |
 
-## 📄 License
+## 📄 许可证
 
 MIT © 2025 [吴晓 (crazyowen)](https://github.com/crazyowen)
 

@@ -8,7 +8,7 @@
 [![OpenClaw](https://img.shields.io/badge/OpenClaw-Skill-ff6b6b)](https://github.com/owenwuhaha/Cultural-Tourism-Project-Planning-Skills)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-Ready-9775fa)](https://claude.ai)
 [![Codex](https://img.shields.io/badge/Codex-Ready-4ade80)](https://codex.openai.com)
-[![Version](https://img.shields.io/badge/version-2.5.0-blue)](./SKILL.md)
+[![Version](https://img.shields.io/badge/version-V2.6-blue)](./SKILL.md)
 [![License](https://img.shields.io/badge/license-MIT-green)](./LICENSE)
 [![Category](https://img.shields.io/badge/category-productivity-orange)](.)
 [![Platform](https://img.shields.io/badge/platform-linux%20%7C%20macos%20%7C%20windows-lightgrey)](.)
@@ -137,7 +137,11 @@ The AI automatically starts the full analysis: **Resource Inventory → Market P
 
 ## 🔌 Multi-Platform Installation
 
+This skill supports the following AI Agent platforms:
+
 ### 🤖 Hermes Agent
+
+Install this repository as a Hermes Skill:
 
 ```bash
 hermes skill install /path/to/cultural-tourism-planner
@@ -153,7 +157,7 @@ openclaw skill load ./Cultural-Tourism-Project-Planning-Skills
 
 Or manually copy `SKILL.md`, `references/`, and `scripts/` into OpenClaw's skill directory.
 
-### 💬 Claude Code
+### 💬 Claude Code (Anthropic)
 
 Add to `CLAUDE.md` or project settings:
 
@@ -222,20 +226,27 @@ This repository includes 8 ready-to-run Python scripts:
 ```
 Cultural-Tourism-Project-Planning-Skills/
 ├── SKILL.md                       # Skill definition (14 modules V2.6)
-├── README.md                      # Chinese README (default)
+├── README.md                      # Chinese README (default display)
 ├── README.en.md                   # English README (via switch link)
-├── references/
-│   ├── industry-data.md           # Industry data & references (284 lines)
+├── RELEASE_NOTES.md               # Release notes (bilingual)
+├── references/                    # Industry data + report templates
+│   ├── industry-data.md           # Industry standards & reference data (284 lines)
 │   └── report-templates.md        # 15 report templates (975 lines)
-└── scripts/                       # Executable tool scripts
-    ├── knowledge-query.py           # Knowledge base query (V2.5 New)
-    ├── project-dashboard.py         # Project dashboard (V2.4)
-    ├── competitive-analysis.py      # Competitive analysis (V2.3)
-    ├── planner-toolkit.py           # Planner toolkit dashboard (V2.2)
-    ├── svg-zoning.py                # SVG zoning map generator (V2.2)
-    ├── generate-plan.py             # Auto plan generator (V2.1)
-    ├── catchment-heatmap.py         # Catchment heatmap (V2.6)
-    └── investment-calc.py           # Investment calculator (V2.0)
+├── scripts/                       # Executable tool scripts
+│   ├── knowledge-query.py         # Knowledge base query (V2.5)
+│   ├── project-dashboard.py       # Project dashboard (V2.4)
+│   ├── competitive-analysis.py    # Competitive analysis (V2.3)
+│   ├── planner-toolkit.py         # Planner toolkit dashboard (V2.2)
+│   ├── svg-zoning.py              # SVG zoning map generator (V2.2)
+│   ├── generate-plan.py           # Auto plan generator (V2.1)
+│   ├── catchment-heatmap.py       # Catchment heatmap (V2.6)
+│   └── investment-calc.py         # Investment calculator (V2.0)
+└── landing/                       # Marketing assets
+    ├── index.html                 # Landing page with animations
+    ├── banner-728x200.html        # Banner ad source
+    ├── banner-728x200.png         # Banner ad image
+    ├── wordpress-page-content.html # WordPress page content
+    └── wordpress-page-mobile.html  # Mobile-optimized version
 ```
 
 ## 🗺️ Version Roadmap
