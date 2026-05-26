@@ -626,10 +626,12 @@ metadata:
 | 版本 | 计划功能 | 状态 |
 |------|---------|------|
 | V1.0 | 14大模块 + 引导模式 + 追问优化 + 方案后续产出 | ✅ 已完成 |
-| V1.1 | 接入地图API，自动生成圈层热力图 | 🔜 规划中 |
-| V1.2 | 知识库动态查询（按需加载wenlv-wiki） | 🔜 规划中 |
-| V1.3 | 自动出SVG功能分区图 | 🔜 规划中 |
-| V2.0 | 接入GIS系统，输出可编辑的矢量布局图 | 🔜 规划中 |
+| V2.0 | 知识库八大维度集成 + README中英文分离 + 配套文件升级 | ✅ 已完成 |
+| **V2.1** | **自动策划脚本(generate-plan.py) + 圈层热力图(catchment-heatmap.py)** | ✅ **已完成** |
+| V2.2 | 接入地图API，自动生成圈层热力图（增强版 + 真实地图） | 🔜 规划中 |
+| V2.3 | 知识库动态查询（按需加载wenlv-wiki） | 🔜 规划中 |
+| V2.4 | 自动出SVG功能分区图（HTML生成器） | 🔜 规划中 |
+| V3.0 | GIS系统集成，输出可编辑矢量布局图 | 🔜 规划中 |
 
 ---
 
@@ -647,8 +649,10 @@ metadata:
   ├── references/                    # 行业数据 + 报告模板
   │   ├── industry-data.md
   │   └── report-templates.md
-  └── scripts/                       # 投资测算脚本
-      └── investment-calc.py
+  └── scripts/                       # 脚本工具
+      ├── investment-calc.py          # 投资测算工具(V2.0)
+      ├── generate-plan.py            # 自动策划脚本(V2.1 新增)
+      └── catchment-heatmap.py        # 圈层热力图生成(V2.1 新增)
   ```
 - **中英文切换机制：** `README.md` 顶部有 `🇬🇧 English → README.en.md` 切换链接，`README.en.md` 顶部有 `🇨🇳 中文 → README.md` 切换链接
 - **同步路径：** Hermes 技能目录 → `f:/owen/hermes/skills-dev/cultural-tourism-planner/`（本地开发版）→ GitHub
