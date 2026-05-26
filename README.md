@@ -33,12 +33,12 @@
 
 它模拟一位拥有 **10年以上经验** 的注册文旅规划师，遵循《旅游规划通则》(GB/T 18971-2003)，从 **甲方视角** 关注投资回报和落地性。
 
-**V2.4 新增亮点：**
+**V2.5 新增亮点：**
 
 | 新增内容 | 说明 |
 |---------|------|
+| 📚 **知识库动态查询** [`knowledge-query.py`](./scripts/knowledge-query.py) | 交互式浏览wenlv-wiki知识库，支持关键词搜索/维度浏览/页面类型筛选，可导出HTML看板 |
 | 📊 **项目总览看板** [`project-dashboard.py`](./scripts/project-dashboard.py) | 自动扫描 projects/ 目录，按项目分类聚合所有已生成报告，生成统一HTML看板 |
-| 📊 **竞品对标分析工具** [`competitive-analysis.py`](./scripts/competitive-analysis.py) | 2-5个竞品6维雷达图+竞争力矩阵+SWOT+差异化建议，生成暗色主题HTML报告 |
 | 🗺️ **SVG功能分区图生成器** [`svg-zoning.py`](./scripts/svg-zoning.py) | 交互输入项目参数，自动生成带饼图、图例、功能描述和承载力估算的暗色主题 HTML 分区图 |
 | 🎛️ **策划工具箱总控台** [`planner-toolkit.py`](./scripts/planner-toolkit.py) | 整合所有脚本的统一交互菜单，一键启动任意工具，查看已生成文件 |
 | 🚀 **自动策划脚本** [`generate-plan.py`](./scripts/generate-plan.py) | 交互输入项目参数，自动输出八大模块完整 Markdown 策划方案，一键保存到本地 |
@@ -229,11 +229,12 @@ Ask questions when info is insufficient. Never fabricate data. Stay compliant.
 
 ## 🛠️ 配套工具脚本
 
-本仓库提供了7个可直接运行的 Python 工具脚本：
+本仓库提供了8个可直接运行的 Python 工具脚本：
 
 | 脚本 | 版本 | 功能描述 | 用法 |
 |------|------|---------|------|
-| [`scripts/project-dashboard.py`](./scripts/project-dashboard.py) | V2.4 🆕 | **项目总览看板** — 自动扫描projects/目录，按项目聚合所有报告生成统一看板 | `python project-dashboard.py` |
+| [`scripts/knowledge-query.py`](./scripts/knowledge-query.py) | V2.5 🆕 | **知识库动态查询** — 交互式浏览wenlv-wiki知识库，关键词搜索/维度浏览/类型筛选，导出HTML看板 | `python knowledge-query.py` |
+| [`scripts/project-dashboard.py`](./scripts/project-dashboard.py) | V2.4 | **项目总览看板** — 自动扫描projects/目录，按项目聚合所有报告生成统一看板 | `python project-dashboard.py` |
 | [`scripts/competitive-analysis.py`](./scripts/competitive-analysis.py) | V2.3 | **竞品对标分析** — 6维雷达图+竞争力矩阵+SWOT，生成暗色主题HTML报告 | `python competitive-analysis.py` |
 | [`scripts/planner-toolkit.py`](./scripts/planner-toolkit.py) | V2.2 | **策划工具箱总控台** — 整合所有脚本的统一交互菜单 | `python planner-toolkit.py` |
 | [`scripts/svg-zoning.py`](./scripts/svg-zoning.py) | V2.2 | **SVG功能分区图生成** — 自动生成带饼图的暗色主题 HTML 分区图 | `python svg-zoning.py` |
@@ -254,14 +255,15 @@ Ask questions when info is insufficient. Never fabricate data. Stay compliant.
 
 ```
 Cultural-Tourism-Project-Planning-Skills/
-├── SKILL.md                       # 技能定义（14大模块 V2.4）
+├── SKILL.md                       # 技能定义（14大模块 V2.5）
 ├── README.md                      # 中文默认README（默认呈现中文版）
 ├── README.en.md                   # 英文版README（通过切换链接访问）
 ├── references/                    # 行业数据 + 报告模板
 │   ├── industry-data.md           # 行业标准与参考数据（284行）
 │   └── report-templates.md        # 15种策划报告模板（975行）
 └── scripts/                       # 可运行工具脚本
-    ├── project-dashboard.py         # 项目总览看板（V2.4 新增）
+    ├── knowledge-query.py           # 知识库动态查询（V2.5 新增）
+    ├── project-dashboard.py         # 项目总览看板（V2.4）
     ├── competitive-analysis.py      # 竞品对标分析（V2.3）
     ├── planner-toolkit.py           # 策划工具箱总控台（V2.2）
     ├── svg-zoning.py                # SVG功能分区图生成（V2.2）
@@ -280,8 +282,8 @@ Cultural-Tourism-Project-Planning-Skills/
 | **V2.2** | **策划工具箱总控台 + SVG功能分区图生成器** | ✅ **已完成** |
 | **V2.3** | **竞品对标分析工具（6维雷达图+竞争力矩阵+SWOT）** | ✅ **已完成** |
 | **V2.4** | **项目总览看板（自动扫描聚合所有报告）** | ✅ **已完成** |
-| V2.5 | 接入地图API，自动生成圈层热力图（增强版 + 真实地图） | 🔜 规划中 |
-| V2.6 | 知识库动态查询（按需加载wenlv-wiki） | 🔜 规划中 |
+| **V2.5** | **知识库动态查询（交互浏览wenlv-wiki知识库）** | ✅ **已完成** |
+| V2.6 | 接入地图API，自动生成圈层热力图（增强版 + 真实地图） | 🔜 规划中 |
 | V3.0 | GIS系统集成 + 增强SVG分区图 | 🔜 规划中 |
 
 ## 📄 License

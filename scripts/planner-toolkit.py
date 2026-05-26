@@ -11,17 +11,18 @@ import subprocess
 from pathlib import Path
 
 # ── 配置 ──────────────────────────────────────────────
-VERSION = "V2.4"
+VERSION = "V2.5"
 TOOLS_DIR = Path(__file__).parent.resolve()
 PROJECTS_DIR = Path("F:/owen/hermes/projects")
 
 SCRIPTS = [
-    ("generate-plan.py",   "📊 自动策划方案"),
-    ("investment-calc.py", "📈 投资测算工具"),
-    ("catchment-heatmap.py","🌐 客源圈层热力图"),
+    ("knowledge-query.py",   "📚 知识库动态查询"),
+    ("generate-plan.py",     "📊 自动策划方案"),
+    ("investment-calc.py",   "📈 投资测算工具"),
+    ("catchment-heatmap.py", "🌐 客源圈层热力图"),
     ("competitive-analysis.py", "📊 竞品对标分析"),
-    ("project-dashboard.py",   "🏗️ 项目总览看板"),
-    ("svg-zoning.py",      "🗺️ SVG功能分区图"),
+    ("project-dashboard.py", "🏗️ 项目总览看板"),
+    ("svg-zoning.py",        "🗺️ SVG功能分区图"),
 ]
 
 # ── Banner ────────────────────────────────────────────
