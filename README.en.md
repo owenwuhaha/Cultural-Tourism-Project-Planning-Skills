@@ -33,18 +33,11 @@
 
 It simulates a **registered cultural tourism planner with 10+ years** of experience, following China's *Tourism Planning General Regulation* (GB/T 18971-2003), with a focus on ROI and project feasibility from the **client's perspective**.
 
-**V2.5 Highlights:**
+**V2.6 Highlights:**
 
 | New Feature | Description |
 |-------------|-------------|
-| 📚 **Knowledge Base Query** [`knowledge-query.py`](./scripts/knowledge-query.py) | Interactive browse of the wenlv-wiki KB — keyword search, dimension browsing, type filtering, exportable HTML dashboard |
-| 📊 **Project Dashboard** [`project-dashboard.py`](./scripts/project-dashboard.py) | Auto-scan projects/ directory, aggregate all generated reports by project into a unified HTML dashboard |
-| 🗺️ **SVG Zoning Map Generator** [`svg-zoning.py`](./scripts/svg-zoning.py) | Interactive input → auto-generate dark-themed HTML zoning map with pie chart, legend, descriptions & capacity estimation |
-| 🎛️ **Planner Toolkit Dashboard** [`planner-toolkit.py`](./scripts/planner-toolkit.py) | Unified interactive menu integrating all tools, one-click launch, view generated files |
-| 🚀 **Auto Plan Generator** [`generate-plan.py`](./scripts/generate-plan.py) | Interactive input → auto-generate 8-module complete Markdown proposal, save locally |
-| 🌐 **Catchment Heatmap Generator** [`catchment-heatmap.py`](./scripts/catchment-heatmap.py) | Generate standalone HTML heatmap (3 concentric rings, 33 Chinese cities data, dark theme) |
-| 📋 **15 Report Templates** | Added business model, immersive tourism, policy funding, land compliance, health retreat templates |
-| 📊 **Industry Data Enhanced** | Added 10 trend tracks, her-tourism persona, 5-layer revenue model, all-season strategy, wellness market data |
+| 🌐 **Catchment Heatmap Enhanced** [`catchment-heatmap.py`](./scripts/catchment-heatmap.py) | Integrated Leaflet.js+OpenStreetMap real map, dark basemap, 3 concentric transit rings, data dashboard, interactive zoom |
 
 ### Core Principles
 
@@ -212,7 +205,7 @@ This repository includes 8 ready-to-run Python scripts:
 | [`scripts/planner-toolkit.py`](./scripts/planner-toolkit.py) | V2.2 | **Planner Toolkit Dashboard** — Unified menu integrating all tools | `python planner-toolkit.py` |
 | [`scripts/svg-zoning.py`](./scripts/svg-zoning.py) | V2.2 | **SVG Zoning Map Generator** — Dark-themed HTML zoning map with pie chart | `python svg-zoning.py` |
 | [`scripts/generate-plan.py`](./scripts/generate-plan.py) | V2.1 | **Auto Plan Generator** — Interactive input → 8-module Markdown proposal | `python generate-plan.py` |
-| [`scripts/catchment-heatmap.py`](./scripts/catchment-heatmap.py) | V2.1 | **Catchment Heatmap** — Standalone HTML heatmap (33 cities data) | `python catchment-heatmap.py` |
+| [`scripts/catchment-heatmap.py`](./scripts/catchment-heatmap.py) | V2.6 | **Catchment Heatmap** — Standalone HTML heatmap (33 cities data) | `python catchment-heatmap.py` |
 | [`scripts/investment-calc.py`](./scripts/investment-calc.py) | V2.0 | **Investment Calculator** — 3-scenario forecast, 5-layer revenue model | `python investment-calc.py` |
 
 > 📝 All scripts are pure Python standard library — no third-party dependencies required.
@@ -228,7 +221,7 @@ This repository includes 8 ready-to-run Python scripts:
 
 ```
 Cultural-Tourism-Project-Planning-Skills/
-├── SKILL.md                       # Skill definition (14 modules V2.5)
+├── SKILL.md                       # Skill definition (14 modules V2.6)
 ├── README.md                      # Chinese README (default)
 ├── README.en.md                   # English README (via switch link)
 ├── references/
@@ -241,7 +234,7 @@ Cultural-Tourism-Project-Planning-Skills/
     ├── planner-toolkit.py           # Planner toolkit dashboard (V2.2)
     ├── svg-zoning.py                # SVG zoning map generator (V2.2)
     ├── generate-plan.py             # Auto plan generator (V2.1)
-    ├── catchment-heatmap.py         # Catchment heatmap (V2.1)
+    ├── catchment-heatmap.py         # Catchment heatmap (V2.6)
     └── investment-calc.py           # Investment calculator (V2.0)
 ```
 
@@ -256,7 +249,8 @@ Cultural-Tourism-Project-Planning-Skills/
 | **V2.3** | **Competitive analysis tool (6D radar + matrix + SWOT)** | ✅ **Complete** |
 | **V2.4** | **Project dashboard (auto-scan & aggregate all reports)** | ✅ **Complete** |
 | **V2.5** | **Knowledge base query (interactive browse wenlv-wiki)** | ✅ **Complete** |
-| V2.6 | Map API integration, enhanced real-map heatmap | 🔜 Planned |
+| **V2.6** | **Catchment heatmap enhanced (Leaflet.js+OpenStreetMap real map)** | ✅ **Complete** |
+| V2.7 | Map API integration enhancement | 🔜 Planned |
 | V3.0 | GIS integration + enhanced SVG zoning map | 🔜 Planned |
 
 ## 📄 License

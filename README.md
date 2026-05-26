@@ -33,18 +33,11 @@
 
 它模拟一位拥有 **10年以上经验** 的注册文旅规划师，遵循《旅游规划通则》(GB/T 18971-2003)，从 **甲方视角** 关注投资回报和落地性。
 
-**V2.5 新增亮点：**
+**V2.6 新增亮点：**
 
 | 新增内容 | 说明 |
 |---------|------|
-| 📚 **知识库动态查询** [`knowledge-query.py`](./scripts/knowledge-query.py) | 交互式浏览wenlv-wiki知识库，支持关键词搜索/维度浏览/页面类型筛选，可导出HTML看板 |
-| 📊 **项目总览看板** [`project-dashboard.py`](./scripts/project-dashboard.py) | 自动扫描 projects/ 目录，按项目分类聚合所有已生成报告，生成统一HTML看板 |
-| 🗺️ **SVG功能分区图生成器** [`svg-zoning.py`](./scripts/svg-zoning.py) | 交互输入项目参数，自动生成带饼图、图例、功能描述和承载力估算的暗色主题 HTML 分区图 |
-| 🎛️ **策划工具箱总控台** [`planner-toolkit.py`](./scripts/planner-toolkit.py) | 整合所有脚本的统一交互菜单，一键启动任意工具，查看已生成文件 |
-| 🚀 **自动策划脚本** [`generate-plan.py`](./scripts/generate-plan.py) | 交互输入项目参数，自动输出八大模块完整 Markdown 策划方案，一键保存到本地 |
-| 🌐 **圈层热力图生成器** [`catchment-heatmap.py`](./scripts/catchment-heatmap.py) | 基于项目类型自动生成客源圈层热力图（独立 HTML，含33城市人口数据，深色主题） |
-| 📋 **15种报告模板** | 新增商业模式设计、沉浸式情绪价值设计、政策资金申报、土地合规检查清单、康养度假升级版 |
-| 📊 **行业数据增强** | 新增十大趋势赛道、她旅游客群画像、5层收入结构数据、全时运营策略、康养市场数据 |
+| 🌐 **圈层热力图增强版** [`catchment-heatmap.py`](./scripts/catchment-heatmap.py) | 集成Leaflet.js+OpenStreetMap真实地图，深色底图，3个同心交通圈，数据仪表板，交互缩放 |
 
 ### 核心原则
 
@@ -239,7 +232,7 @@ Ask questions when info is insufficient. Never fabricate data. Stay compliant.
 | [`scripts/planner-toolkit.py`](./scripts/planner-toolkit.py) | V2.2 | **策划工具箱总控台** — 整合所有脚本的统一交互菜单 | `python planner-toolkit.py` |
 | [`scripts/svg-zoning.py`](./scripts/svg-zoning.py) | V2.2 | **SVG功能分区图生成** — 自动生成带饼图的暗色主题 HTML 分区图 | `python svg-zoning.py` |
 | [`scripts/generate-plan.py`](./scripts/generate-plan.py) | V2.1 | **自动策划脚本** — 交互输入项目参数，自动生成八大模块完整 Markdown 策划方案 | `python generate-plan.py` |
-| [`scripts/catchment-heatmap.py`](./scripts/catchment-heatmap.py) | V2.1 | **圈层热力图生成** — 生成独立 HTML 客源圈层热力图（含33城市人口数据） | `python catchment-heatmap.py` |
+| [`scripts/catchment-heatmap.py`](./scripts/catchment-heatmap.py) | V2.6 | **圈层热力图生成** — 生成独立 HTML 客源圈层热力图（含33城市人口数据） | `python catchment-heatmap.py` |
 | [`scripts/investment-calc.py`](./scripts/investment-calc.py) | V2.0 | **投资测算工具** — 三情景预测、5层收入模型、敏感性分析 | `python investment-calc.py` |
 
 > 📝 所有脚本为纯 Python 标准库实现，无需安装第三方依赖，直接运行即可。
@@ -255,7 +248,7 @@ Ask questions when info is insufficient. Never fabricate data. Stay compliant.
 
 ```
 Cultural-Tourism-Project-Planning-Skills/
-├── SKILL.md                       # 技能定义（14大模块 V2.5）
+├── SKILL.md                       # 技能定义（14大模块 V2.6）
 ├── README.md                      # 中文默认README（默认呈现中文版）
 ├── README.en.md                   # 英文版README（通过切换链接访问）
 ├── references/                    # 行业数据 + 报告模板
@@ -268,7 +261,7 @@ Cultural-Tourism-Project-Planning-Skills/
     ├── planner-toolkit.py           # 策划工具箱总控台（V2.2）
     ├── svg-zoning.py                # SVG功能分区图生成（V2.2）
     ├── generate-plan.py             # 自动策划脚本（V2.1）
-    ├── catchment-heatmap.py         # 圈层热力图生成（V2.1）
+    ├── catchment-heatmap.py         # 圈层热力图生成（V2.6）
     └── investment-calc.py           # 投资测算工具（V2.0）
 ```
 
@@ -283,7 +276,8 @@ Cultural-Tourism-Project-Planning-Skills/
 | **V2.3** | **竞品对标分析工具（6维雷达图+竞争力矩阵+SWOT）** | ✅ **已完成** |
 | **V2.4** | **项目总览看板（自动扫描聚合所有报告）** | ✅ **已完成** |
 | **V2.5** | **知识库动态查询（交互浏览wenlv-wiki知识库）** | ✅ **已完成** |
-| V2.6 | 接入地图API，自动生成圈层热力图（增强版 + 真实地图） | 🔜 规划中 |
+| **V2.6** | **圈层热力图增强版（集成Leaflet.js+OpenStreetMap真实地图）** | ✅ **已完成** |
+| V2.7 | 接入地图API增强 | 🔜 规划中 |
 | V3.0 | GIS系统集成 + 增强SVG分区图 | 🔜 规划中 |
 
 ## 📄 License

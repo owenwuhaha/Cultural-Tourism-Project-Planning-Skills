@@ -11,7 +11,7 @@ import subprocess
 from pathlib import Path
 
 # ── 配置 ──────────────────────────────────────────────
-VERSION = "V2.5"
+VERSION = "V2.6"
 TOOLS_DIR = Path(__file__).parent.resolve()
 PROJECTS_DIR = Path("F:/owen/hermes/projects")
 
