@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>文旅策划规划助手 - AI赋能文旅策划全流程</title>
+<style>
+/* ===== CSS Variables & Reset ===== */
+:root {
+  --primary: #f04494;
+  --primary-dark: #d02a78;
+  --primary-glow: rgba(240,68,148,.5);
+  --accent: #00f0ff;
+  --accent2: #ffd700;
+  --bg-dark: #0a0e17;
+  --bg-card: rgba(15,23,42,.85);
+  --text: #e2e8f0;
+  --text-muted: #94a3b8;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;
+  background: var(--bg-dark);
+  color: var(--text);
+  overflow-x: hidden;
+  line-height: 1.7;
+}
+
+/* ===== Animated Background ===== */
+#particles-canvas {
+  position: fixed; inset: 0; z-index: 0;
+  pointer-events: none;
+}
+
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar { width:6px; }
+::-webkit-scrollbar-track { background: var(--bg-dark); }
+::-webkit-scrollbar-thumb { background:var(--primary); border-radius:3px; }
+
+/* ===== Typography ===== */
+h1,h2,h3,h4 { font-weight: 800; letter-spacing: -.02em; }
+h1 { font-size: clamp(2.2rem,6vw,4rem); }
+h2 { font-size: clamp(1.6rem,4vw,2.6rem); text-align:center; margin-bottom:1rem; }
+h3 { font-size: clamp(1rem,2.5vw,1.5rem); }
+
+/* ===== Layout ===== */
+section {
+  position:relative; z-index:1;
+  padding: 80px 20px;
+  max-width: 1100px; margin:0 auto;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  min-height: 100vh;
+  display: flex; flex-direction:column; align-items:center; justify-content:center;
+  text-align: center;
+  position: relative; z-index:1;
+  padding: 40px 20px;
+}
+.hero-badge {
+  display:inline-block;
+  padding:6px 18px;
+  border:1px solid var(--accent);
+  border-radius:20px;
+  font-size:0.8rem;
+  color:var(--accent);
+  letter-spacing:2px;
+  margin-bottom:30px;
+  animation: fadeInUp 1s ease-out both 0.3s;
+}
+.hero h1 {
+  background: linear-gradient(135deg,#fff 0%,var(--primary) 40%,var(--accent) 70%,var(--accent2) 100%);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 4s ease infinite;
+  margin-bottom: 20px;
+}
+.hero-sub {
+  font-size: clamp(1rem,2.5vw,1.3rem);
+  color: var(--text-muted);
+  max-width: 700px;
+  margin-bottom: 40px;
+  animation: fadeInUp 1s ease-out both 0.6s;
+}
+.hero-actions {
+  display: flex; gap:16px; flex-wrap:wrap; justify-content:center;
+  animation: fadeInUp 1s ease-out both 0.9s;
+}
+.btn {
+  display:inline-flex; align-items:center; gap:8px;
+  padding:14px 32px;
+  border-radius: 50px;
+  font-size: 1rem; font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all .3s ease;
+  border: none;
+}
+.btn-primary {
+  background: linear-gradient(135deg,var(--primary),var(--primary-dark));
+  color:#fff;
+  box-shadow: 0 4px 20px var(--primary-glow);
+}
+.btn-primary:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 35px var(--primary-glow);
+}
+.btn-outline {
+  background: transparent;
+  color: var(--text);
+  border: 2px solid rgba(255,255,255,.25);
+}
+.btn-outline:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: translateY(-3px);
+}
+.hero-stats {
+  display: flex; gap:40px; margin-top:50px;
+  animation: fadeInUp 1s ease-out both 1.2s;
+}
+.hero-stat {
+  text-align:center;
+}
+.hero-stat-number {
+  font-size: clamp(1.8rem,4vw,3rem);
+  font-weight: 900;
+  background: linear-gradient(135deg,var(--primary),var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero-stat-label {
+  font-size:0.8rem;
+  color:var(--text-muted);
+  margin-top:4px;
+}
+
+/* Scroll indicator */
+.scroll-indicator {
+  position: absolute; bottom:30px; left:50%; transform:translateX(-50%);
+  display:flex; flex-direction:column; align-items:center; gap:8px;
+  color:var(--text-muted); font-size:0.75rem;
+  animation: fadeInUp 1s ease-out both 1.5s;
+}
+.scroll-indicator .mouse {
+  width:24px; height:38px;
+  border:2px solid var(--text-muted);
+  border-radius: 12px;
+  position: relative;
+}
+.scroll-indicator .mouse::after {
+  content:''; display:block;
+  width:4px; height:8px;
+  background:var(--primary);
+  border-radius: 2px;
+  position:absolute; top:8px; left:50%; transform:translateX(-50%);
+  animation: scrollWheel 1.5s ease-in-out infinite;
+}
+
+/* ===== Section Title ===== */
+.section-title {
+  margin-bottom: 60px;
+}
+.section-title h2 {
+  position: relative;
+  display: inline-block;
+}
+.section-title h2::after {
+  content:'';
+  display:block; width:60px; height:3px;
+  background: var(--primary);
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+.section-title p {
+  text-align:center;
+  color:var(--text-muted);
+  max-width:600px; margin:16px auto 0;
+}
+
+/* ===== Feature Cards ===== */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  gap: 24px;
+}
+.feature-card {
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 20px;
+  padding: 32px 28px;
+  transition: all .4s cubic-bezier(.175,.885,.32,1.275);
+  position: relative;
+  overflow: hidden;
+}
+.feature-card::before {
+  content:'';
+  position: absolute; top:0; left:0; right:0; height:3px;
+  background: linear-gradient(90deg,var(--primary),var(--accent));
+  opacity:0;
+  transition: opacity .3s;
+}
+.feature-card:hover::before { opacity:1; }
+.feature-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--primary);
+  box-shadow: 0 20px 50px rgba(240,68,148,.15);
+}
+.feature-icon {
+  font-size: 2.5rem; margin-bottom: 16px;
+  display: inline-block;
+}
+.feature-card h3 {
+  margin-bottom: 12px;
+  color: #fff;
+}
+.feature-card p {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+.feature-tag {
+  display:inline-block;
+  margin-top:16px;
+  padding:2px 12px;
+  border-radius: 10px;
+  font-size:0.75rem;
+  font-weight:600;
+  background: rgba(240,68,148,.15);
+  color: var(--primary);
+}
+
+/* ===== Who's it for ===== */
+.audience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 20px;
+}
+.audience-card {
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.06);
+  border-radius: 16px;
+  padding: 28px 24px;
+  text-align: center;
+  transition: all .3s;
+}
+.audience-card:hover {
+  background: rgba(240,68,148,.08);
+  border-color: var(--primary);
+  transform: scale(1.03);
+}
+.audience-icon { font-size: 2.8rem; margin-bottom: 12px; }
+.audience-card h3 { margin-bottom: 8px; }
+.audience-card p { color:var(--text-muted); font-size:0.9rem; }
+
+/* ===== Tool Table ===== */
+.tools-section {
+  background: rgba(240,68,148,.03);
+  border-radius: 24px;
+  padding: 60px 40px;
+  margin: 40px auto;
+}
+.tool-table {
+  width:100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+}
+.tool-table th {
+  text-align:left;
+  padding: 12px 16px;
+  border-bottom: 2px solid rgba(240,68,148,.3);
+  color: var(--primary);
+  font-size:0.85rem;
+  text-transform: uppercase;
+  letter-spacing:1px;
+}
+.tool-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(255,255,255,.05);
+  font-size:0.92rem;
+}
+.tool-table tr:hover td {
+  background: rgba(255,255,255,.02);
+}
+.tool-name {
+  font-family: 'SF Mono','Fira Code','Consolas',monospace;
+  color: var(--accent);
+  font-size:0.85rem;
+}
+.tool-version {
+  display:inline-block;
+  padding:1px 10px;
+  border-radius: 8px;
+  font-size:0.78rem;
+  font-weight:600;
+  background: rgba(0,240,255,.1);
+  color: var(--accent);
+}
+.tool-version.latest {
+  background: rgba(240,68,148,.15);
+  color: var(--primary);
+}
+
+/* ===== Knowledge Base ===== */
+.kb-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  gap: 12px;
+}
+.kb-item {
+  background: rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.06);
+  border-radius: 12px;
+  padding: 16px 20px;
+  text-align:center;
+  font-size:0.92rem;
+  transition: all .3s;
+}
+.kb-item:hover {
+  background: rgba(240,68,148,.1);
+  border-color: var(--primary);
+  transform: translateY(-2px);
+}
+
+/* ===== CTA ===== */
+.cta-section {
+  text-align: center;
+  max-width: 700px;
+  margin: 80px auto;
+}
+.cta-section h2 { margin-bottom: 16px; }
+.cta-section p { color:var(--text-muted); margin-bottom: 32px; }
+.cta-code {
+  background: #1a1f2e;
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 12px;
+  padding: 20px 24px;
+  text-align: left;
+  font-family: 'SF Mono','Fira Code','Consolas',monospace;
+  font-size:0.85rem;
+  line-height: 1.8;
+  color: #e2e8f0;
+  overflow-x: auto;
+  margin-bottom: 24px;
+}
+.cta-code .prompt { color: var(--accent2); }
+.cta-code .comment { color: #6b7280; }
+
+/* ===== Footer ===== */
+.footer {
+  position:relative; z-index:1;
+  text-align:center;
+  padding: 40px 20px;
+  border-top: 1px solid rgba(255,255,255,.05);
+  color: var(--text-muted);
+  font-size:0.85rem;
+}
+.footer a { color: var(--primary); text-decoration:none; }
+.footer a:hover { text-decoration:underline; }
+
+/* ===== Animations ===== */
+@keyframes gradientShift {
+  0%,100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+@keyframes fadeInUp {
+  from { opacity:0; transform:translateY(30px); }
+  to { opacity:1; transform:translateY(0); }
+}
+@keyframes scrollWheel {
+  0%,100% { opacity:1; transform:translateX(-50%) translateY(0); }
+  50% { opacity:0.3; transform:translateX(-50%) translateY(10px); }
+}
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+[data-aos] { opacity:0; transform:translateY(30px); transition:all .8s ease-out; }
+[data-aos].aos-animate { opacity:1; transform:translateY(0); }
+[data-aos-delay] { transition-delay: attr(data-aos-delay ms); }
+
+/* ===== Responsive ===== */
+@media (max-width:768px) {
+  section { padding: 50px 16px; }
+  .hero-stats { gap:20px; flex-wrap:wrap; justify-content:center; }
+  .tools-section { padding: 30px 16px; }
+  .features-grid { grid-template-columns: 1fr; }
+}
+
+/* ===== Floating Orbs ===== */
+.orb {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+  animation: float 8s ease-in-out infinite;
+}
+.orb-1 {
+  width: 400px; height: 400px;
+  background: rgba(240,68,148,.12);
+  top: -100px; right: -100px;
+  animation-delay: 0s;
+}
+.orb-2 {
+  width: 350px; height: 350px;
+  background: rgba(0,240,255,.08);
+  bottom: -50px; left: -80px;
+  animation-delay: -3s;
+}
+.orb-3 {
+  width: 250px; height: 250px;
+  background: rgba(255,215,0,.06);
+  top: 50%; left: 50%;
+  animation-delay: -6s;
+}
+</style>
+</head>
+<body>
+
+<!-- Floating Orbs -->
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+<div class="orb orb-3"></div>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-badge">⚡ AI-EMPOWERED · OPEN SOURCE</div>
+  <h1>🏔️ 文旅策划规划助手</h1>
+  <p class="hero-sub">8个AI工具覆盖文旅策划全流程 — 从项目调研到方案交付，<br>面向文旅策划师、景区规划人员、政府文旅部门的开源工具集</p>
+  <div class="hero-actions">
+    <a href="https://github.com/owenwuhaha/Cultural-Tourism-Project-Planning-Skills" class="btn btn-primary" target="_blank">🚀 立即使用</a>
+    <a href="#features" class="btn btn-outline">了解更多 ↓</a>
+    <a href="https://github.com/owenwuhaha/Cultural-Tourism-Project-Planning-Skills" class="btn btn-outline" target="_blank">⭐ GitHub</a>
+  </div>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="hero-stat-number">8</div>
+      <div class="hero-stat-label">AI工具脚本</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-number">33</div>
+      <div class="hero-stat-label">知识库页面</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-number">V2.6</div>
+      <div class="hero-stat-label">最新版本</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-number">8</div>
+      <div class="hero-stat-label">知识库维度</div>
+    </div>
+  </div>
+  <div class="scroll-indicator">
+    <div class="mouse"></div>
+    <span>向下滚动</span>
+  </div>
+</section>
+
+<!-- ===== FEATURES ===== -->
+<section id="features" data-aos>
+  <div class="section-title">
+    <h2>💡 它能帮你做什么？</h2>
+    <p>从项目调研到方案交付，8个AI工具覆盖文旅策划全流程</p>
+  </div>
+  <div class="features-grid">
+    <div class="feature-card" data-aos data-aos-delay="100">
+      <div class="feature-icon">📊</div>
+      <h3>自动策划方案</h3>
+      <p>输入项目参数，自动生成结构化策划方案HTML，含市场分析、定位策略、投资测算</p>
+      <span class="feature-tag">V2.1</span>
+    </div>
+    <div class="feature-card" data-aos data-aos-delay="200">
+      <div class="feature-icon">🗺️</div>
+      <h3>圈层热力图（真实地图）</h3>
+      <p>集成 Leaflet.js + OpenStreetMap 真实地图底图，24个城市坐标，1h/2h/3h交通圈可视化</p>
+      <span class="feature-tag">V2.6 🆕</span>
+    </div>
+    <div class="feature-card" data-aos data-aos-delay="300">
+      <div class="feature-icon">📈</div>
+      <h3>投资测算</h3>
+      <p>4种模式 × 4种��态 × 5层收入结构，快速产出财务可行性分析和投资回报估算</p>
+      <span class="feature-tag">V2.0</span>
+    </div>
+    <div class="feature-card" data-aos data-aos-delay="100">
+      <div class="feature-icon">🎯</div>
+      <h3>竞品对标分析</h3>
+      <p>6维雷达图 + 气泡矩阵 + SWOT分析 + 差异化策略，纯Python零依赖一键生成</p>
+      <span class="feature-tag">V2.3</span>
+    </div>
+    <div class="feature-card" data-aos data-aos-delay="200">
+      <div class="feature-icon">🏗️</div>
+      <h3>SVG功能分区图</h3>
+      <p>暗色主题功能分区图，含饼图、图例、承载力估算，规划方案可视化呈现</p>
+      <span class="feature-tag">V2.2</span>
+    </div>
+    <div class="feature-card" data-aos data-aos-delay="300">
+      <div class="feature-icon">📚</div>
+      <h3>知识库查询 + 看板</h3>
+      <p>33页wenlv-wiki知识库动态查询 + 项目总览看板一键聚合所有报告</p>
+      <span class="feature-tag">V2.4/2.5</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TOOL TABLE ===== -->
+<section data-aos>
+  <div class="section-title">
+    <h2>🛠️ 8个工具，一应俱全</h2>
+    <p>每个脚本独立可运行，也支持总控台统一调度</p>
+  </div>
+  <div class="tools-section">
+    <table class="tool-table">
+      <thead>
+        <tr><th>工具</th><th>版本</th><th>功能</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><span class="tool-name">project-dashboard.py</span></td><td><span class="tool-version">V2.4</span></td><td>项目总览看板 — 自动扫描聚合所有报告</td></tr>
+        <tr><td><span class="tool-name">knowledge-query.py</span></td><td><span class="tool-version">V2.5</span></td><td>知识库动态查询 — 交互浏览wenlv-wiki</td></tr>
+        <tr><td><span class="tool-name">competitive-analysis.py</span></td><td><span class="tool-version">V2.3</span></td><td>竞品对标分析 — 雷达图+SWOT+差异化策略</td></tr>
+        <tr><td><span class="tool-name">catchment-heatmap.py</span></td><td><span class="tool-version latest">V2.6 🆕</span></td><td>圈层热力图增强版 — 真实地图Leaflet.js+OSM</td></tr>
+        <tr><td><span class="tool-name">planner-toolkit.py</span></td><td><span class="tool-version latest">V2.6</span></td><td>策划工具箱总控台 — 统一交互菜单</td></tr>
+        <tr><td><span class="tool-name">svg-zoning.py</span></td><td><span class="tool-version">V2.2</span></td><td>SVG功能分区图生成</td></tr>
+        <tr><td><span class="tool-name">generate-plan.py</span></td><td><span class="tool-version">V2.1</span></td><td>自动策划方案生成</td></tr>
+        <tr><td><span class="tool-name">investment-calc.py</span></td><td><span class="tool-version">V2.0</span></td><td>投资测算工具</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ===== AUDIENCE ===== -->
+<section data-aos>
+  <div class="section-title">
+    <h2>🎯 适合谁用？</h2>
+    <p>无论你是个人策划师还是政府部门，这套工具都能帮到你</p>
+  </div>
+  <div class="audience-grid">
+    <div class="audience-card" data-aos data-aos-delay="100">
+      <div class="audience-icon">👨‍💼</div>
+      <h3>文旅策划师</h3>
+      <p>快速出具方案初稿，竞品分析一键生成，项目汇报效率翻倍</p>
+    </div>
+    <div class="audience-card" data-aos data-aos-delay="200">
+      <div class="audience-icon">🏛️</div>
+      <h3>景区规划人员</h3>
+      <p>客源圈层可视化分析，投资回报快速测算，功能分区科学规划</p>
+    </div>
+    <div class="audience-card" data-aos data-aos-delay="300">
+      <div class="audience-icon">🏢</div>
+      <h3>政府文旅部门</h3>
+      <p>项目规划论证参考，政策资金通道对照，产业发展方向研判</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== KNOWLEDGE BASE ===== -->
+<section data-aos>
+  <div class="section-title">
+    <h2>📖 知识库覆盖8大维度</h2>
+    <p>配套285行行业参考数据 + 15个策划方案模板 + 圈层热力图参考</p>
+  </div>
+  <div class="kb-grid">
+    <div class="kb-item">📋 政策法规</div>
+    <div class="kb-item">💡 策划方法论</div>
+    <div class="kb-item">📐 规划体系</div>
+    <div class="kb-item">🌾 农文旅融合</div>
+    <div class="kb-item">🌿 康养疗愈</div>
+    <div class="kb-item">📈 运营升级</div>
+    <div class="kb-item">💼 商业模式</div>
+    <div class="kb-item">🔮 行业趋势</div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta-section" data-aos>
+  <h2>🚀 快速开始</h2>
+  <p>零依赖，纯Python，一键运行 — 打开终端，输入以下命令：</p>
+  <div class="cta-code">
+    <span class="prompt">$</span> git clone https://github.com/owenwuhaha/Cultural-Tourism-Project-Planning-Skills.git<br>
+    <span class="prompt">$</span> cd Cultural-Tourism-Project-Planning-Skills/scripts<br>
+    <span class="comment"># 工具总控台 — 交互式菜单</span><br>
+    <span class="prompt">$</span> python planner-toolkit.py<br>
+    <br>
+    <span class="comment"># 或者直接运行单个工具</span><br>
+    <span class="prompt">$</span> python generate-plan.py<br>
+    <span class="prompt">$</span> python catchment-heatmap.py --demo<br>
+    <span class="prompt">$</span> python competitive-analysis.py
+  </div>
+  <div style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center">
+    <a href="https://github.com/owenwuhaha/Cultural-Tourism-Project-Planning-Skills" class="btn btn-primary" target="_blank">⭐ GitHub 仓库</a>
+    <a href="https://github.com/owenwuhaha/Cultural-Tourism-Project-Planning-Skills/releases/tag/v2.6.0" class="btn btn-outline" target="_blank">📦 查看 Release</a>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<div class="footer">
+  <p>🏔️ 文旅策划规划助手 · <a href="https://github.com/owenwuhaha/Cultural-Tourism-Project-Planning-Skills" target="_blank">GitHub</a></p>
+  <p>
+    适合 Hermes Agent / OpenClaw / Claude Code / Codex 等AI智能体系统<br>
+    由 <a href="https://www.crazyowen.cn" target="_blank">疯狂的豇豆</a> 开发维护 · MIT 协议
+  </p>
+</div>
+
+<!-- ===== Scroll Reveal ===== -->
+<script>
+(function() {
+  'use strict';
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('aos-animate');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('[data-aos]').forEach(el => observer.observe(el));
+})();
+</script>
+</body>
+</html>
