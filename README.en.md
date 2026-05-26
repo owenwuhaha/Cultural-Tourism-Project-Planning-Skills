@@ -1,19 +1,19 @@
 <div align="center">
 
-# 🏔️ Cultural Tourism Planner
+# 🏔️ Cultural Tourism Project Planning Skills
 
-**AI-Powered Cultural Tourism Project Planning Skills**
+**文旅策划规划助手**
 
 [![Hermes Skill](https://img.shields.io/badge/Hermes-Skill-8A2BE2)](https://hermes-agent.nousresearch.com)
 [![OpenClaw](https://img.shields.io/badge/OpenClaw-Skill-ff6b6b)](https://github.com/owenwuhaha/Cultural-Tourism-Project-Planning-Skills)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-Ready-9775fa)](https://claude.ai)
 [![Codex](https://img.shields.io/badge/Codex-Ready-4ade80)](https://codex.openai.com)
-[![Version](https://img.shields.io/badge/version-1.0.0-blue)](./SKILL.md)
+[![Version](https://img.shields.io/badge/version-2.0.0-blue)](./SKILL.md)
 [![License](https://img.shields.io/badge/license-MIT-green)](./LICENSE)
 [![Category](https://img.shields.io/badge/category-productivity-orange)](.)
 [![Platform](https://img.shields.io/badge/platform-linux%20%7C%20macos%20%7C%20windows-lightgrey)](.)
 
-> **Cut planning time from 3 days to 3 hours** — AI-powered cultural tourism planning that lets planners focus on creativity, not paperwork.
+> **Compress planning time from 3 days to 3 hours** — An AI-assisted tool built by front-line planners, for front-line planners. Let the AI handle documentation while planners focus on creativity.
 
 </div>
 
@@ -21,7 +21,7 @@
 
 <div align="center">
 
-[**🇬🇧 English**](#-cultural-tourism-planner) · [**🇨🇳 中文**](./README.md)
+[**🇨🇳 中文**](./README.md) · [**🇬🇧 English**](#-cultural-tourism-project-planning-skills)
 
 </div>
 
@@ -29,39 +29,48 @@
 
 ## 📖 Overview
 
-**Cultural Tourism Planner** is a professional AI-powered planning assistant for the cultural tourism industry, compatible with multiple AI Agent platforms.
+**Cultural Tourism Project Planning Skills** is a professional AI-assisted skill for the cultural tourism industry, compatible with multiple AI Agent platforms (Hermes Agent, OpenClaw, Claude Code, Codex).
 
-It simulates a **registered cultural tourism planner with 10+ years of experience**, adhering to China's *Tourism Planning General Code* (GB/T 18971-2003). It approaches every project from the **client/investor's perspective**, focusing on ROI and practical feasibility.
+It simulates a **registered cultural tourism planner with 10+ years** of experience, following China's *Tourism Planning General Regulation* (GB/T 18971-2003), with a focus on ROI and project feasibility from the **client's perspective**.
+
+**V2.0 Highlights:** Integrated an 8-dimension knowledge base (policy & regulation, planning methodology, spatial planning system, agri-tourism integration, wellness tourism, operations upgrade, business models, industry trends). Expanded from 7 to 14 modules, adding Business Model Design, Immersive Experience & Emotional Value, Policy & Funding Application, Land Compliance, and more.
 
 ### Core Principles
 
 | Principle | Description |
 |-----------|-------------|
-| 🎭 **Role-Play + Methodology + CoT** | Guided analysis framework simulating a senior planner's thinking |
-| ❓ **Ask Before Fabricate** | Always ask the user when information is insufficient — never make up data |
-| 📊 **Data with Sources** | All estimates labeled as "industry reference range" or "rough estimate" |
-| 🛡️ **Compliance First** | Never bypass fire safety, environmental, or land-use regulations |
+| 🎭 **Role Play + Methodology + Chain of Thought** | Guiding every step with a senior planner's mental framework |
+| ❓ **Ask Before Making Up** | Always ask the user when information is insufficient |
+| 📊 **Data Must Be Sourced** | All estimates labeled as "industry reference range" or "rough estimate" |
+| 🛡️ **Compliance First** | Never bypass fire, environmental, or land-use regulations |
 
 ## 🎯 Target Users
 
 | Role | Use Case |
 |------|----------|
-| 👷 **Tourism Planners** | Rapid framework generation, product mix design, preliminary financial modeling |
-| 🗺️ **Scenic Area Operators** | Resource assessment, visitor flow planning, spatial layout, capacity estimation |
-| 🏛️ **Government Tourism Departments** | Rural revitalization planning, A-level scenic area certification, feasibility studies |
-| 💼 **Consultants** | Market analysis, competitive benchmarking, business plans, financial projections |
+| 👷 **Tourism Planners** | Rapid planning frameworks, product combinations, investment estimation drafts |
+| 🗺️ **Scenic Area Planners** | Resource assessment, circulation planning, capacity estimation |
+| 🏛️ **Government Tourism Departments** | Rural revitalization tourism plans, A-level scenic area creation, feasibility studies |
+| 💼 **Consulting Firms** | Market analysis, competitor benchmarking, business plans, financial modeling |
 
-## 🧩 Core Modules
+## 🧩 Core Feature Modules
 
-| # | Module | Features | Output |
-|---|--------|----------|--------|
-| 1 | **Resource Assessment** | 5-dimension classification, SWOT matrix, competitive benchmarking, rarity scoring | Structured resource inventory + SWOT analysis |
-| 2 | **Market & Audience Analysis** | Radius analysis, persona generation, trend matching, differentiation advice | Personas + market size estimate |
-| 3 | **Theme & IP Planning** | Cultural deconstruction, theme direction generation, slogan creation, micro-scripts | 3-5 theme directions + brand slogan |
-| 4 | **Spatial Layout & Flow Planning** | Layout mode recommendation, visitor flow simulation, capacity estimation, zone ratio | Functional zones + flow description |
-| 5 | **Product Mix Planning** | Asset-light/heavy recommendations, night economy solutions | Product mix table + item list |
-| 6 | **Financial Modeling & Risk Assessment** | Investment estimation, revenue forecast, payback period, risk analysis | Financial model + risk report |
-| 7 | **Report Generation** | 10 structured templates for different project types | Markdown-format planning document |
+| # | Module | Description |
+|---|--------|-------------|
+| 1 | **Resource Assessment** | 5-dimension classification, SWOT analysis, competitor benchmarking, scarcity scoring |
+| 2 | **Market & Audience Analysis** | Radius analysis, customer personas, 10 trend tracks matching |
+| 3 | **Theme & IP Planning** | Cultural deconstruction, local culture IP activation methodology, storylines |
+| 4 | **Spatial Layout & Circulation** | Layout patterns, 5-tier planning system, 7-line regulation reminders |
+| 5 | **Product Mix** | Business type ratios, night economy toolkit, all-season operation strategies |
+| 6 | **Investment & Risk Assessment** | Cost estimation, 3-scenario revenue forecasting, payback period analysis |
+| 7 | **Report Generation** | 10 structured templates with academic terminology translation |
+| 8 | **Business Model Design** | 5-tier revenue model, full lifecycle profitability strategy (New) |
+| 9 | **Immersive Experience & Emotional Value** | Tourism 3.0 evolution, 6 emotion tracks, 5-sense design (New) |
+| 10 | **Agri-Tourism Integration** | 4 development forms, 6 integration models quick reference (New) |
+| 11 | **Wellness & Healing Tourism** | 5 integration models, multi-trillion market analysis (New) |
+| 12 | **Policy & Funding Applications** | 8 funding channels, application workflow, 6 red-line warnings (New) |
+| 13 | **Land Compliance Guide** | Land type lookup, 4 common traps, 3 compliance paths (New) |
+| 14 | **Planning Methodology Toolkit** | Planning vs. design, "3 Light + 3 True" principles, 3 verification checklists (New) |
 
 ### 10 Built-in Report Templates
 
@@ -69,40 +78,40 @@ It simulates a **registered cultural tourism planner with 10+ years of experienc
 |---|-------------|
 | 1 | 📋 Scenic Area Upgrade Plan |
 | 2 | 🌾 Rural Revitalization Tourism Plan |
-| 3 | 🏖️ Resort Development Plan |
-| 4 | 🎒 Study Base (研学基地) Plan |
-| 5 | 💰 Business Plan (Tourism Projects) |
-| 6 | 📑 Feasibility Study Report Outline |
-| 7 | 🏆 A-Level Scenic Area Certification Plan |
+| 3 | 🏖️ Resort Development Proposal |
+| 4 | 🎒 Study Tour Base Plan |
+| 5 | 💰 Tourism Business Plan |
+| 6 | 📑 Feasibility Study Report |
+| 7 | 🏆 A-Level Scenic Area Creation Plan |
 | 8 | 🌃 Night Economy Project Plan |
-| 9 | 🏥 Wellness & Healthcare Resort Plan |
-| 10 | 🏭 Industrial Tourism Transformation Plan |
+| 9 | 🏥 Wellness Resort Project Plan |
+| 10 | 🏭 Industrial Tourism Renovation Plan |
 
-## 🚀 How to Trigger
+## 🚀 Activation Methods
 
 ### Intent Recognition
 
 Simply say or type:
 
 ```
-Create a scenic area plan for me
+Help me plan a scenic area
 Analyze if this village is suitable for tourism
-Write a cultural tourism planning proposal
-Calculate the investment return
+Write a cultural tourism plan
+Calculate investment return
 ```
 
 ### Quick Commands
 
 | Command | Function |
 |---------|----------|
-| `/plan` | Full planning workflow |
+| `/plan` | Full planning workflow (14 modules) |
 | `/swot` | SWOT Analysis |
-| `/calculate` | Investment calculation |
-| `/report` | Generate report |
+| `/calculate` | Investment Estimation |
+| `/report` | Generate Report |
 
 ### File Upload
 
-Supports: research reports, photos, Excel spreadsheets, CAD sketches — the AI automatically parses the content.
+Supports uploading: research reports, photos, Excel spreadsheets, CAD sketches — the AI automatically parses the content.
 
 ## ⚡ Quick Start
 
@@ -110,120 +119,86 @@ Supports: research reports, photos, Excel spreadsheets, CAD sketches — the AI 
 # Trigger a full planning workflow
 /plan
 
-# Or directly describe your project
-> I want to plan rural tourism for a 1000-mu lakeside village,
+# Or directly describe your needs
+> I want to plan a rural tourism project for a 1,000 mu waterfront village,
 > 1.5 hours from the provincial capital, with farmland and ancient trees
 ```
 
-The AI will automatically run through the complete workflow: **Resource Inventory → Market Positioning → Theme Extraction → Spatial Flow → Financial Analysis**.
+The AI automatically starts the full analysis: **Resource Inventory → Market Positioning → Theme Extraction → Spatial Flow → Financial Analysis**.
 
 ## 🔌 Multi-Platform Installation
 
-This skill works across multiple AI Agent platforms. Choose the one that fits your workflow:
+| Platform | Installation | Recommendation |
+|----------|-------------|----------------|
+| 🟣 **Hermes Agent** | `hermes skill install` | ⭐ Native Support |
+| 🟠 **OpenClaw** | Import SKILL.md directory | ⭐ Full Compatibility |
+| 🟢 **Claude Code** | Add to CLAUDE.md project instructions | ✅ Manual Setup |
+| 🔵 **Codex (OpenAI)** | Add to System Prompt | ✅ Manual Setup |
 
 ### 🤖 Hermes Agent
 
-Install as a native Hermes Skill:
-
 ```bash
-# Install from local directory
 hermes skill install /path/to/cultural-tourism-planner
-
-# Install from GitHub
 hermes skill install https://github.com/owenwuhaha/Cultural-Tourism-Project-Planning-Skills
 ```
 
-Once installed, trigger it naturally in conversation (e.g., "Create a scenic area plan for me").
-
 ### 🐾 OpenClaw
 
-OpenClaw supports loading SKILL.md-format skill files natively.
-
-**Method 1: Import skill directory**
 ```bash
-# Clone the repo
 git clone https://github.com/owenwuhaha/Cultural-Tourism-Project-Planning-Skills.git
-
-# Load via OpenClaw's skill command
 openclaw skill load ./Cultural-Tourism-Project-Planning-Skills
 ```
 
-**Method 2: Manual copy**
-Copy `SKILL.md`, `references/`, and `scripts/` into your OpenClaw skill directory.
+Or manually copy `SKILL.md`, `references/`, and `scripts/` into OpenClaw's skill directory.
 
-### 💬 Claude Code (Anthropic)
+### 💬 Claude Code
 
-**Method 1: Project Instructions (Recommended)**
-
-Add the following to your `CLAUDE.md` or project instructions:
+Add to `CLAUDE.md` or project settings:
 
 ```markdown
-## Cultural Tourism Planner
+## Cultural Tourism Planning Assistant
 
-You have expertise in cultural tourism planning. Follow these principles:
-- Role-play as a senior planner with 10+ years experience
-- Ask before fabricating — always question when info is insufficient
-- Cite data sources, never fabricate regulated information
-- Stay compliant with all regulations
+You are a registered cultural tourism planner with 10+ years of experience.
+- Always ask before making up information
+- All data must be sourced
+- Compliance first
 
-### Required Workflow (internal reasoning order)
+### Workflow (internal thinking order)
 1. Resource Inventory → 2. Market Positioning → 3. Theme Extraction → 4. Spatial Flow → 5. Financial Analysis
 ```
 
-**Method 2: Activate in conversation**
-
-In any Claude Code session, simply say:
-> Act as a cultural tourism planner. Follow the 5-step workflow (resources → market → theme → flow → finance) to plan a project for me.
-
 ### ✨ Codex (OpenAI)
 
-**Method 1: System Prompt**
-
-Add this to your Codex Instructions or system prompt:
+Add to system prompt:
 
 ```markdown
 You are a registered cultural tourism planner with 10+ years of experience.
 Follow this workflow for every project:
-1. Resource Inventory — what resources does the site have?
-2. Market Positioning — who will visit and why?
-3. Theme Extraction — what's the unique story?
-4. Spatial Flow — how do visitors move and spend?
-5. Financial Analysis — can the client make money?
-Ask questions when info is insufficient. Never fabricate data. Stay compliant with regulations.
+1. Resource Inventory
+2. Market Positioning
+3. Theme Extraction
+4. Spatial Flow
+5. Financial Analysis
+Ask questions when info is insufficient. Never fabricate data. Stay compliant.
 ```
-
-**Method 2: File reference**
-
-Add `references/industry-data.md` as a project context file in your Codex project.
-
-### 📋 Platform Comparison
-
-| Platform | Installation | Recommendation |
-|----------|-------------|----------------|
-| 🟣 **Hermes Agent** | `hermes skill install` — one command | ⭐ Native |
-| 🟠 **OpenClaw** | Import SKILL.md directory | ⭐ Fully Compatible |
-| 🟢 **Claude Code** | CLAUDE.md project instructions | ✅ Manual Setup |
-| 🔵 **Codex (OpenAI)** | System Prompt configuration | ✅ Manual Setup |
 
 ## 📊 Reference Data
 
-The skill includes extensive industry reference data:
-
-| File | Content |
-|------|---------|
-| [`references/industry-data.md`](./references/industry-data.md) | Industry standards, investment thresholds, pricing, gross margins, market data, policy trends |
-| [`references/report-templates.md`](./references/report-templates.md) | 10 complete planning report templates |
+| File | Contents |
+|------|----------|
+| [`references/industry-data.md`](./references/industry-data.md) | Industry standards, investment thresholds, per-customer spending, margins, market size, policy trends |
+| [`references/report-templates.md`](./references/report-templates.md) | 10 complete report templates |
 | [`scripts/investment_calc.py`](./scripts/investment_calc.py) | Investment calculation Python script |
 
-## 🗺️ Roadmap
+## 🗺️ Version Roadmap
 
 | Version | Features | Status |
 |---------|----------|--------|
-| V1.0 | 7 core modules + report generation + questioning mechanism | ✅ Complete |
-| V1.1 | Map API integration, automatic heatmap generation | 🔜 Planned |
-| V1.2 | Competitor case library (500+ projects) | 🔜 Planned |
-| V1.3 | Multi-modal support (hand-drawn sketch → functional zoning) | 🔜 Planned |
-| V2.0 | GIS integration, editable vector layout output | 🔜 Planned |
+| V2.0 | 14 modules + 8-dimension knowledge base + optimized questions + post-plan output | ✅ Complete |
+| V2.1 | Map API integration, automatic heatmap generation | 🔜 Planned |
+| V2.2 | Dynamic knowledge base queries (wenlv-wiki on demand) | 🔜 Planned |
+| V2.3 | Auto-generated SVG zoning maps | 🔜 Planned |
+| V3.0 | GIS system integration, editable vector layout maps | 🔜 Planned |
 
 ## 📄 License
 
@@ -233,8 +208,8 @@ MIT © 2025 [Xiao Wu (crazyowen)](https://github.com/crazyowen)
 
 <div align="center">
 
-**Built by a practitioner, for practitioners.**
+**Built by front-line planners, for front-line planners.**
 
-[Report Issue](https://github.com/owenwuhaha/Cultural-Tourism-Project-Planning-Skills/issues) · [Request Feature](https://github.com/owenwuhaha/Cultural-Tourism-Project-Planning-Skills/issues)
+[Report Issues](https://github.com/owenwuhaha/Cultural-Tourism-Project-Planning-Skills/issues) · [Feature Requests](https://github.com/owenwuhaha/Cultural-Tourism-Project-Planning-Skills/issues)
 
 </div>

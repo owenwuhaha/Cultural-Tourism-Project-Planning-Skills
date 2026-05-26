@@ -8,7 +8,7 @@
 [![OpenClaw](https://img.shields.io/badge/OpenClaw-Skill-ff6b6b)](https://github.com/owenwuhaha/Cultural-Tourism-Project-Planning-Skills)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-Ready-9775fa)](https://claude.ai)
 [![Codex](https://img.shields.io/badge/Codex-Ready-4ade80)](https://codex.openai.com)
-[![Version](https://img.shields.io/badge/version-1.0.0-blue)](./SKILL.md)
+[![Version](https://img.shields.io/badge/version-2.0.0-blue)](./SKILL.md)
 [![License](https://img.shields.io/badge/license-MIT-green)](./LICENSE)
 [![Category](https://img.shields.io/badge/category-productivity-orange)](.)
 [![Platform](https://img.shields.io/badge/platform-linux%20%7C%20macos%20%7C%20windows-lightgrey)](.)
@@ -33,6 +33,8 @@
 
 它模拟一位拥有 **10年以上经验** 的注册文旅规划师，遵循《旅游规划通则》(GB/T 18971-2003)，从 **甲方视角** 关注投资回报和落地性。
 
+**V2.0 升级亮点：** 集成八大维度文旅知识库（政策法规、策划方法论、规划体系、农文旅融合、康养疗愈、运营升级、商业模式、行业趋势），模块从7个扩展至14个，新增商业模式设计、沉浸式情绪价值、政策资金申报、土地合规等专业模块。
+
 ### 核心原则
 
 | 原则 | 说明 |
@@ -53,15 +55,22 @@
 
 ## 🧩 核心功能模块
 
-| # | 模块 | 功能 | 输出 |
-|---|------|------|------|
-| 1 | **资源禀赋评估** | 五维分类、SWOT矩阵、竞品对标、稀缺性评分 | 结构化资源清单 + SWOT分析 |
-| 2 | **市场与客群分析** | 圈层分析、客群画像、趋势捕捉、差异化建议 | 客群画像 + 市场规模估算 |
-| 3 | **主题定位与IP策划** | 文化解构、主题方向、Slogan生成、微剧本 | 3-5个主题方向 + 品牌Slogan |
-| 4 | **空间布局与动线规划** | 布局模式、动线模拟、承载力估算、分区比例 | 功能分区 + 动线描述 |
-| 5 | **业态策划与产品矩阵** | 业态配比、轻/重资产推荐、夜经济方案 | 业态配比表 + 产品清单 |
-| 6 | **投资测算与风险评估** | 投资估算、收入预测、回收期、风险提示 | 财务模型 + 风险报告 |
-| 7 | **规范报告生成** | 10种结构化模板，适配不同项目类型 | Markdown格式策划方案 |
+| # | 模块 | 说明 |
+|---|------|------|
+| 1 | **资源禀赋评估** | 五维分类、SWOT矩阵、竞品对标、资源稀缺性评分 |
+| 2 | **市场与客群分析** | 圈层分析、客群画像、十大趋势赛道匹配 |
+| 3 | **主题定位与IP策划** | 文化解构、在地文化IP激活方法论、故事线 |
+| 4 | **空间布局与动线规划** | 布局模式、五层规划体系、七线管控提醒 |
+| 5 | **业态策划与产品矩阵** | 业态配比、夜经济五件套、全时运营策略 |
+| 6 | **投资测算与风险评估** | 投资估算、三情景收入预测、回收期分析 |
+| 7 | **规范报告生成** | 10种结构化模板，学术化转译功能 |
+| 8 | **商业模式设计** | 5层收入结构模型、全生命周期盈利策略（知识库新增） |
+| 9 | **沉浸式文旅与情绪价值** | 文旅3.0进化模型、六大情绪赛道、五感设计（知识库新增） |
+| 10 | **农文旅融合模式** | 四大发展形态、六大融合模式速查（知识库新增） |
+| 11 | **康养疗愈旅游** | 五大融合模式、百万亿市场分析（知识库新增） |
+| 12 | **政策资金申报** | 八大资金通道、申报流程、六大红线（知识库新增） |
+| 13 | **土地合规指引** | 地类速查、四大陷阱、三条合规路径（知识库新增） |
+| 14 | **策划方法论验证工具箱** | 策划vs规划区别、三轻三真原则、三大验证清单 |
 
 ### 10种内置报告模板
 
@@ -69,13 +78,13 @@
 |---|---------|
 | 1 | 📋 景区提升规划方案 |
 | 2 | 🌾 乡村振兴旅游策划方案 |
-| 3 | 🏖️ 度假区策划方案 |
-| 4 | 🎒 研学基地策划方��� |
-| 5 | 💰 商业计划书（文旅项目） |
-| 6 | 📑 可行性研究报告大纲 |
+| 3 | 🏖️ 度假区申报方案 |
+| 4 | 🎒 研学基地策划方案 |
+| 5 | 💰 文旅商业计划书 |
+| 6 | 📑 可行性研究报告 |
 | 7 | 🏆 A级景区创建方案 |
 | 8 | 🌃 夜经济项目策划方案 |
-| 9 | 🏥 康养度假项目策划方案 |
+| 9 | 🏥 康养度假项目方案 |
 | 10 | 🏭 工业旅游改造方案 |
 
 ## 🚀 触发方式
@@ -95,7 +104,7 @@
 
 | 指令 | 功能 |
 |------|------|
-| `/plan` | 完整策划流程 |
+| `/plan` | 完整策划流程（14大模块） |
 | `/swot` | SWOT 分析 |
 | `/calculate` | 投资测算 |
 | `/report` | 生成报告 |
@@ -141,11 +150,7 @@ OpenClaw 支持加载 SKILL.md 格式的技能文件。
 
 **方法一：导入技能目录**
 ```bash
-# 克隆仓库到本地
 git clone https://github.com/owenwuhaha/Cultural-Tourism-Project-Planning-Skills.git
-
-# 在 OpenClaw 配置中指向该技能目录
-# 或通过 OpenClaw 的 skill 加载命令
 openclaw skill load ./Cultural-Tourism-Project-Planning-Skills
 ```
 
@@ -156,7 +161,7 @@ openclaw skill load ./Cultural-Tourism-Project-Planning-Skills
 
 **方法一：Project Instructions（推荐）**
 
-将项目中的提示词模板添加到 Claude Code 的项目指令中。在 Claude Code 的 `CLAUDE.md` 或项目设置中添加如下指令：
+将项目中的提示词模板添加到 Claude Code 的项目指令中。在 `CLAUDE.md` 或项目设置中添加：
 
 ```markdown
 ## 文旅策划助手
@@ -180,7 +185,7 @@ openclaw skill load ./Cultural-Tourism-Project-Planning-Skills
 
 **方法一：System Prompt**
 
-在 Codex 的 Instructions 或 system prompt 中添加以下角色设定：
+在 Codex 的 Instructions 或 system prompt 中添加：
 
 ```markdown
 You are a registered cultural tourism planner with 10+ years of experience.
@@ -190,12 +195,12 @@ Follow this workflow for every project:
 3. Theme Extraction — what's the unique story?
 4. Spatial Flow — how do visitors move and spend?
 5. Financial Analysis — can the client make money?
-Ask questions when info is insufficient. Never fabricate data. Stay compliant with regulations.
+Ask questions when info is insufficient. Never fabricate data. Stay compliant.
 ```
 
 **方法二：文件引用**
 
-将 `references/industry-data.md` 作为项目上下文文件添加到 Codex 项目中。当需要策划时，直接描述需求即可。
+将 `references/industry-data.md` 作为项目上下文文件添加到 Codex 项目中。
 
 ### 📋 平台对比
 
@@ -218,11 +223,11 @@ Ask questions when info is insufficient. Never fabricate data. Stay compliant wi
 
 | 版本 | 计划功能 | 状态 |
 |------|---------|------|
-| V1.0 | 基础七大模块 + 报告生成 + 追问机制 | ✅ 已完成 |
-| V1.1 | 接入地图API，自动生成圈层热力图 | 🔜 规划中 |
-| V1.2 | 增加竞品案例库（500+已开发文旅项目） | 🔜 规划中 |
-| V1.3 | 多模态支持（手绘草图→功能分区图） | 🔜 规划中 |
-| V2.0 | 接入GIS系统，输出可编辑的矢量布局图 | 🔜 规划中 |
+| V2.0 | 14大模块 + 八大知识库集成 + 追问优化 + 方案后续产出 | ✅ 已完成 |
+| V2.1 | 接入地图API，自动生成圈层热力图 | 🔜 规划中 |
+| V2.2 | 知识库动态查询（按需加载wenlv-wiki） | 🔜 规划中 |
+| V2.3 | 自动出SVG功能分区图 | 🔜 规划中 |
+| V3.0 | 接入GIS系统，输出可编辑的矢量布局图 | 🔜 规划中 |
 
 ## 📄 License
 
