@@ -646,7 +646,7 @@ metadata:
   ├── README.en.md                   # 英文版README（通过切换链接访问）
   ├── references/                    # 行业数据 + 报告模板
   │   ├── industry-data.md
-  │   └── report-templates/
+  │   └── report-templates.md
   └── scripts/                       # 投资测算脚本
       └── investment-calc.py
   ```
