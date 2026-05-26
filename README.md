@@ -8,7 +8,7 @@
 [![OpenClaw](https://img.shields.io/badge/OpenClaw-Skill-ff6b6b)](https://github.com/owenwuhaha/Cultural-Tourism-Project-Planning-Skills)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-Ready-9775fa)](https://claude.ai)
 [![Codex](https://img.shields.io/badge/Codex-Ready-4ade80)](https://codex.openai.com)
-[![Version](https://img.shields.io/badge/version-2.0.0-blue)](./SKILL.md)
+[![Version](https://img.shields.io/badge/version-2.1.0-blue)](./SKILL.md)
 [![License](https://img.shields.io/badge/license-MIT-green)](./LICENSE)
 [![Category](https://img.shields.io/badge/category-productivity-orange)](.)
 [![Platform](https://img.shields.io/badge/platform-linux%20%7C%20macos%20%7C%20windows-lightgrey)](.)
@@ -33,7 +33,14 @@
 
 它模拟一位拥有 **10年以上经验** 的注册文旅规划师，遵循《旅游规划通则》(GB/T 18971-2003)，从 **甲方视角** 关注投资回报和落地性。
 
-**V2.0 升级亮点：** 集成八大维度文旅知识库（政策法规、策划方法论、规划体系、农文旅融合、康养疗愈、运营升级、商业模式、行业趋势），模块从7个扩展至14个，新增商业模式设计、沉浸式情绪价值、政策资金申报、土地合规等专业模块。
+**V2.1 新增亮点：**
+
+| 新增内容 | 说明 |
+|---------|------|
+| 🚀 **自动策划脚本** [`generate-plan.py`](./scripts/generate-plan.py) | 交互输入项目参数，自动输出八大模块完整 Markdown 策划方案，一键保存到本地 |
+| 🌐 **圈层热力图生成器** [`catchment-heatmap.py`](./scripts/catchment-heatmap.py) | 基于项目类型自动生成客源圈层热力图（独立 HTML，含33城市人口数据，深色主题） |
+| 📋 **15种报告模板** | 新增商业模式设计、沉浸式情绪价值设计、政策资金申报、土地合规检查清单、康养度假升级版 |
+| 📊 **行业数据增强** | 新增十大趋势赛道、她旅游客群画像、5层收入结构数据、全时运营策略、康养市场数据 |
 
 ### 核心原则
 
@@ -63,29 +70,34 @@
 | 4 | **空间布局与动线规划** | 布局模式、五层规划体系、七线管控提醒 |
 | 5 | **业态策划与产品矩阵** | 业态配比、夜经济五件套、全时运营策略 |
 | 6 | **投资测算与风险评估** | 投资估算、三情景收入预测、回收期分析 |
-| 7 | **规范报告生成** | 10种结构化模板，学术化转译功能 |
-| 8 | **商业模式设计** | 5层收入结构模型、全生命周期盈利策略（知识库新增） |
-| 9 | **沉浸式文旅与情绪价值** | 文旅3.0进化模型、六大情绪赛道、五感设计（知识库新增） |
-| 10 | **农文旅融合模式** | 四大发展形态、六大融合模式速查（知识库新增） |
-| 11 | **康养疗愈旅游** | 五大融合模式、百万亿市场分析（知识库新增） |
-| 12 | **政策资金申报** | 八大资金通道、申报流程、六大红线（知识库新增） |
-| 13 | **土地合规指引** | 地类速查、四大陷阱、三条合规路径（知识库新增） |
+| 7 | **规范报告生成** | 15种结构化模板，学术化转译功能 |
+| 8 | **商业模式设计** | 5层收入结构模型、全生命周期盈利策略 |
+| 9 | **沉浸式文旅与情绪价值** | 文旅3.0进化模型、六大情绪赛道、五感设计 |
+| 10 | **农文旅融合模式** | 四大发展形态、六大融合模式速查 |
+| 11 | **康养疗愈旅游** | 五大融合模式、百万亿市场分析 |
+| 12 | **政策资金申报** | 八大资金通道、申报流程、六大红线 |
+| 13 | **土地合规指引** | 地类速查、四大陷阱、三条合规路径 |
 | 14 | **策划方法论验证工具箱** | 策划vs规划区别、三轻三真原则、三大验证清单 |
 
-### 10种内置报告模板
+### 15种内置报告模板
 
-| # | 报告类型 |
-|---|---------|
-| 1 | 📋 景区提升规划方案 |
-| 2 | 🌾 乡村振兴旅游策划方案 |
-| 3 | 🏖️ 度假区申报方案 |
-| 4 | 🎒 研学基地策划方案 |
-| 5 | 💰 文旅商业计划书 |
-| 6 | 📑 可行性研究报告 |
-| 7 | 🏆 A级景区创建方案 |
-| 8 | 🌃 夜经济项目策划方案 |
-| 9 | 🏥 康养度假项目方案 |
-| 10 | 🏭 工业旅游改造方案 |
+| # | 报告类型 | 版本 |
+|---|---------|------|
+| 1 | 📋 景区提升规划方案 | V1.0 |
+| 2 | 🌾 乡村振兴旅游策划方案 | V1.0 |
+| 3 | 🏖️ 度假区申报方案 | V1.0 |
+| 4 | 🎒 研学基地策划方案 | V1.0 |
+| 5 | 💰 文旅商业计划书 | V1.0 |
+| 6 | 📑 可行性研究报告 | V1.0 |
+| 7 | 🏆 A级景区创建方案 | V1.0 |
+| 8 | 🌃 夜经济项目策划方案 | V1.0 |
+| 9 | 🏥 康养度假项目方案 | V1.0 |
+| 10 | 🏭 工业旅游改造方案 | V1.0 |
+| 11 | 🏗️ **商业模式设计方案** | **V2.0 新增** |
+| 12 | 🎭 **沉浸式文旅·情绪价值设计** | **V2.0 新增** |
+| 13 | 💸 **政策资金申报方案** | **V2.0 新增** |
+| 14 | 🧱 **土地合规检查清单** | **V2.0 新增** |
+| 15 | 🌿 **康养度假升级方案** | **V2.0 新增** |
 
 ## 🚀 触发方式
 
@@ -211,23 +223,52 @@ Ask questions when info is insufficient. Never fabricate data. Stay compliant.
 | 🟢 **Claude Code** | CLAUDE.md 项目指令 | ✅ 手动配置 |
 | 🔵 **Codex (OpenAI)** | System Prompt 设定 | ✅ 手动配置 |
 
+## 🛠️ 配套工具脚本
+
+本仓库提供了3个可直接运行的 Python 工具脚本：
+
+| 脚本 | 版本 | 功能描述 | 用法 |
+|------|------|---------|------|
+| [`scripts/generate-plan.py`](./scripts/generate-plan.py) | V2.1 🆕 | **自动策划脚本** — 交互输入项目参数，自动生成八大模块完整 Markdown 策划方案 | `python generate-plan.py` |
+| [`scripts/catchment-heatmap.py`](./scripts/catchment-heatmap.py) | V2.1 🆕 | **圈层热力图生成** — 生成独立 HTML 客源圈层热力图（含33城市人口数据） | `python catchment-heatmap.py` |
+| [`scripts/investment-calc.py`](./scripts/investment-calc.py) | V2.0 | **投资测算工具** — 三情景预测、5层收入模型、敏感性分析 | `python investment-calc.py` |
+
+> 📝 所有脚本为纯 Python 标准库实现，无需安装第三方依赖，直接运行即可。
+
 ## 📊 参考数据
 
 | 文件 | 内容 |
 |------|------|
-| [`references/industry-data.md`](./references/industry-data.md) | 行业标准、投资门槛、客单价、毛利率、市场规模、政策热点 |
-| [`references/report-templates.md`](./references/report-templates.md) | 10种策划报告完整模板 |
-| [`scripts/investment_calc.py`](./scripts/investment_calc.py) | 投资测算Python脚本 |
+| [`references/industry-data.md`](./references/industry-data.md) | 行业标准、投资门槛、客单价、毛利率、市场规模、十大趋势、5层收入、康养数据 |
+| [`references/report-templates.md`](./references/report-templates.md) | 15种策划报告完整模板（含V2.0新增商业模式/沉浸式/政策申报/土地合规/康养升级） |
+
+## 📂 仓库文件结构
+
+```
+Cultural-Tourism-Project-Planning-Skills/
+├── SKILL.md                       # 技能定义（14大模块 V2.1）
+├── README.md                      # 中文默认README（默认呈现中文版）
+├── README.en.md                   # 英文版README（通过切换链接访问）
+├── references/                    # 行业数据 + 报告模板
+│   ├── industry-data.md           # 行业标准与参考数据（284行）
+│   └── report-templates.md        # 15种策划报告模板（975行）
+└── scripts/                       # 可运行工具脚本
+    ├── generate-plan.py           # 自动策划脚本（V2.1 新增）
+    ├── catchment-heatmap.py       # 圈层热力图生成（V2.1 新增）
+    └── investment-calc.py         # 投资测算工具（V2.0）
+```
 
 ## 🗺️ 版本规划
 
 | 版本 | 计划功能 | 状态 |
 |------|---------|------|
-| V2.0 | 14大模块 + 八大知识库集成 + 追问优化 + 方案后续产出 | ✅ 已完成 |
-| V2.1 | 接入地图API，自动生成圈层热力图 | 🔜 规划中 |
-| V2.2 | 知识库动态查询（按需加载wenlv-wiki） | 🔜 规划中 |
-| V2.3 | 自动出SVG功能分区图 | 🔜 规划中 |
-| V3.0 | 接入GIS系统，输出可编辑的矢量布局图 | 🔜 规划中 |
+| V1.0 | 14大模块 + 引导模式 + 追问优化 + 方案后续产出 | ✅ 已完成 |
+| V2.0 | 知识库八大维度集成 + README中英文分离 + 15种模板 + 行业数据增强 | ✅ 已完成 |
+| **V2.1** | **自动策划脚本 + 圈层热力图生成工具** | ✅ **已完成** |
+| V2.2 | 接入地图API，自动生成圈层热力图（增强版 + 真实地图） | 🔜 规划中 |
+| V2.3 | 知识库动态查询（按需加载wenlv-wiki） | 🔜 规划中 |
+| V2.4 | 自动出SVG功能分区图（HTML生成器） | 🔜 规划中 |
+| V3.0 | GIS系统集成，输出可编辑矢量布局图 | 🔜 规划中 |
 
 ## 📄 License
 

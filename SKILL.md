@@ -1,7 +1,7 @@
 ---
 name: cultural-tourism-planner
 description: "文旅策划规划助手 — 面向文旅策划师/景区规划人员/政府文旅部门的专业辅助技能，提供从资源盘点、市场分析到投资测算的全流程策划支持。集成八大知识库维度：政策法规、策划方法论、规划体系、农文旅融合、康养疗愈、运营升级、商业模式、行业趋势。"
-version: 2.0.0
+version: 2.1.0
 author: 疯狂的豇豆 (crazyowen)
 category: productivity
 license: MIT

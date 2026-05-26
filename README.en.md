@@ -8,7 +8,7 @@
 [![OpenClaw](https://img.shields.io/badge/OpenClaw-Skill-ff6b6b)](https://github.com/owenwuhaha/Cultural-Tourism-Project-Planning-Skills)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-Ready-9775fa)](https://claude.ai)
 [![Codex](https://img.shields.io/badge/Codex-Ready-4ade80)](https://codex.openai.com)
-[![Version](https://img.shields.io/badge/version-2.0.0-blue)](./SKILL.md)
+[![Version](https://img.shields.io/badge/version-2.1.0-blue)](./SKILL.md)
 [![License](https://img.shields.io/badge/license-MIT-green)](./LICENSE)
 [![Category](https://img.shields.io/badge/category-productivity-orange)](.)
 [![Platform](https://img.shields.io/badge/platform-linux%20%7C%20macos%20%7C%20windows-lightgrey)](.)
@@ -33,7 +33,14 @@
 
 It simulates a **registered cultural tourism planner with 10+ years** of experience, following China's *Tourism Planning General Regulation* (GB/T 18971-2003), with a focus on ROI and project feasibility from the **client's perspective**.
 
-**V2.0 Highlights:** Integrated an 8-dimension knowledge base (policy & regulation, planning methodology, spatial planning system, agri-tourism integration, wellness tourism, operations upgrade, business models, industry trends). Expanded from 7 to 14 modules, adding Business Model Design, Immersive Experience & Emotional Value, Policy & Funding Application, Land Compliance, and more.
+**V2.1 Highlights:**
+
+| New Feature | Description |
+|-------------|-------------|
+| 🚀 **Auto Plan Generator** [`generate-plan.py`](./scripts/generate-plan.py) | Interactive input → auto-generate 8-module complete Markdown proposal, save locally |
+| 🌐 **Catchment Heatmap Generator** [`catchment-heatmap.py`](./scripts/catchment-heatmap.py) | Generate standalone HTML heatmap (3 concentric rings, 33 Chinese cities data, dark theme) |
+| 📋 **15 Report Templates** | Added business model, immersive tourism, policy funding, land compliance, health retreat templates |
+| 📊 **Industry Data Enhanced** | Added 10 trend tracks, her-tourism persona, 5-layer revenue model, all-season strategy, wellness market data |
 
 ### Core Principles
 
@@ -63,29 +70,34 @@ It simulates a **registered cultural tourism planner with 10+ years** of experie
 | 4 | **Spatial Layout & Circulation** | Layout patterns, 5-tier planning system, 7-line regulation reminders |
 | 5 | **Product Mix** | Business type ratios, night economy toolkit, all-season operation strategies |
 | 6 | **Investment & Risk Assessment** | Cost estimation, 3-scenario revenue forecasting, payback period analysis |
-| 7 | **Report Generation** | 10 structured templates with academic terminology translation |
-| 8 | **Business Model Design** | 5-tier revenue model, full lifecycle profitability strategy (New) |
-| 9 | **Immersive Experience & Emotional Value** | Tourism 3.0 evolution, 6 emotion tracks, 5-sense design (New) |
-| 10 | **Agri-Tourism Integration** | 4 development forms, 6 integration models quick reference (New) |
-| 11 | **Wellness & Healing Tourism** | 5 integration models, multi-trillion market analysis (New) |
-| 12 | **Policy & Funding Applications** | 8 funding channels, application workflow, 6 red-line warnings (New) |
-| 13 | **Land Compliance Guide** | Land type lookup, 4 common traps, 3 compliance paths (New) |
-| 14 | **Planning Methodology Toolkit** | Planning vs. design, "3 Light + 3 True" principles, 3 verification checklists (New) |
+| 7 | **Report Generation** | 15 structured templates with academic terminology translation |
+| 8 | **Business Model Design** | 5-tier revenue model, full lifecycle profitability strategy |
+| 9 | **Immersive Experience & Emotional Value** | Tourism 3.0 evolution, 6 emotion tracks, 5-sense design |
+| 10 | **Agri-Tourism Integration** | 4 development forms, 6 integration models quick reference |
+| 11 | **Wellness & Healing Tourism** | 5 integration models, multi-trillion market analysis |
+| 12 | **Policy & Funding Applications** | 8 funding channels, application workflow, 6 red-line warnings |
+| 13 | **Land Compliance Guide** | Land type lookup, 4 common traps, 3 compliance paths |
+| 14 | **Planning Methodology Toolkit** | Planning vs. design, "3 Light + 3 True" principles, 3 verification checklists |
 
-### 10 Built-in Report Templates
+### 15 Built-in Report Templates
 
-| # | Report Type |
-|---|-------------|
-| 1 | 📋 Scenic Area Upgrade Plan |
-| 2 | 🌾 Rural Revitalization Tourism Plan |
-| 3 | 🏖️ Resort Development Proposal |
-| 4 | 🎒 Study Tour Base Plan |
-| 5 | 💰 Tourism Business Plan |
-| 6 | 📑 Feasibility Study Report |
-| 7 | 🏆 A-Level Scenic Area Creation Plan |
-| 8 | 🌃 Night Economy Project Plan |
-| 9 | 🏥 Wellness Resort Project Plan |
-| 10 | 🏭 Industrial Tourism Renovation Plan |
+| # | Report Type | Version |
+|---|-------------|---------|
+| 1 | 📋 Scenic Area Upgrade Plan | V1.0 |
+| 2 | 🌾 Rural Revitalization Tourism Plan | V1.0 |
+| 3 | 🏖️ Resort Development Proposal | V1.0 |
+| 4 | 🎒 Study Tour Base Plan | V1.0 |
+| 5 | 💰 Tourism Business Plan | V1.0 |
+| 6 | 📑 Feasibility Study Report | V1.0 |
+| 7 | 🏆 A-Level Scenic Area Creation Plan | V1.0 |
+| 8 | 🌃 Night Economy Project Plan | V1.0 |
+| 9 | 🏥 Wellness Resort Project Plan | V1.0 |
+| 10 | 🏭 Industrial Tourism Renovation Plan | V1.0 |
+| 11 | 🏗️ **Business Model Design** | **V2.0 New** |
+| 12 | 🎭 **Immersive Tourism & Emotional Value** | **V2.0 New** |
+| 13 | 💸 **Policy & Funding Application** | **V2.0 New** |
+| 14 | 🧱 **Land Compliance Checklist** | **V2.0 New** |
+| 15 | 🌿 **Wellness Retreat Upgrade** | **V2.0 New** |
 
 ## 🚀 Activation Methods
 
@@ -127,13 +139,6 @@ Supports uploading: research reports, photos, Excel spreadsheets, CAD sketches �
 The AI automatically starts the full analysis: **Resource Inventory → Market Positioning → Theme Extraction → Spatial Flow → Financial Analysis**.
 
 ## 🔌 Multi-Platform Installation
-
-| Platform | Installation | Recommendation |
-|----------|-------------|----------------|
-| 🟣 **Hermes Agent** | `hermes skill install` | ⭐ Native Support |
-| 🟠 **OpenClaw** | Import SKILL.md directory | ⭐ Full Compatibility |
-| 🟢 **Claude Code** | Add to CLAUDE.md project instructions | ✅ Manual Setup |
-| 🔵 **Codex (OpenAI)** | Add to System Prompt | ✅ Manual Setup |
 
 ### 🤖 Hermes Agent
 
@@ -182,23 +187,61 @@ Follow this workflow for every project:
 Ask questions when info is insufficient. Never fabricate data. Stay compliant.
 ```
 
+### Platform Comparison
+
+| Platform | Installation | Recommendation |
+|----------|-------------|----------------|
+| 🟣 **Hermes Agent** | `hermes skill install` | ⭐ Native Support |
+| 🟠 **OpenClaw** | Import SKILL.md directory | ⭐ Full Compatibility |
+| 🟢 **Claude Code** | Add to CLAUDE.md project instructions | ✅ Manual Setup |
+| 🔵 **Codex (OpenAI)** | Add to System Prompt | ✅ Manual Setup |
+
+## 🛠️ Tool Scripts
+
+This repository includes 3 ready-to-run Python scripts:
+
+| Script | Version | Description | Usage |
+|--------|---------|-------------|-------|
+| [`scripts/generate-plan.py`](./scripts/generate-plan.py) | V2.1 🆕 | **Auto Plan Generator** — Interactive input → 8-module Markdown proposal | `python generate-plan.py` |
+| [`scripts/catchment-heatmap.py`](./scripts/catchment-heatmap.py) | V2.1 🆕 | **Catchment Heatmap** — Standalone HTML heatmap (33 cities data) | `python catchment-heatmap.py` |
+| [`scripts/investment-calc.py`](./scripts/investment-calc.py) | V2.0 | **Investment Calculator** — 3-scenario forecast, 5-layer revenue model | `python investment-calc.py` |
+
+> 📝 All scripts are pure Python standard library — no third-party dependencies required.
+
 ## 📊 Reference Data
 
 | File | Contents |
 |------|----------|
-| [`references/industry-data.md`](./references/industry-data.md) | Industry standards, investment thresholds, per-customer spending, margins, market size, policy trends |
-| [`references/report-templates.md`](./references/report-templates.md) | 10 complete report templates |
-| [`scripts/investment_calc.py`](./scripts/investment_calc.py) | Investment calculation Python script |
+| [`references/industry-data.md`](./references/industry-data.md) | Industry standards, investment thresholds, per-customer spending, margins, market size, 10 trends, 5-layer revenue, wellness data |
+| [`references/report-templates.md`](./references/report-templates.md) | 15 complete report templates (including V2.0 new business model/immersive/policy/land/wellness) |
+
+## 📂 Repository Structure
+
+```
+Cultural-Tourism-Project-Planning-Skills/
+├── SKILL.md                       # Skill definition (14 modules V2.1)
+├── README.md                      # Chinese README (default)
+├── README.en.md                   # English README (via switch link)
+├── references/
+│   ├── industry-data.md           # Industry data & references (284 lines)
+│   └── report-templates.md        # 15 report templates (975 lines)
+└── scripts/                       # Executable tool scripts
+    ├── generate-plan.py           # Auto plan generator (V2.1 New)
+    ├── catchment-heatmap.py       # Catchment heatmap (V2.1 New)
+    └── investment-calc.py         # Investment calculator (V2.0)
+```
 
 ## 🗺️ Version Roadmap
 
 | Version | Features | Status |
 |---------|----------|--------|
-| V2.0 | 14 modules + 8-dimension knowledge base + optimized questions + post-plan output | ✅ Complete |
-| V2.1 | Map API integration, automatic heatmap generation | 🔜 Planned |
-| V2.2 | Dynamic knowledge base queries (wenlv-wiki on demand) | 🔜 Planned |
-| V2.3 | Auto-generated SVG zoning maps | 🔜 Planned |
-| V3.0 | GIS system integration, editable vector layout maps | 🔜 Planned |
+| V1.0 | 14 modules + guided mode + optimized questions + post-plan output | ✅ Complete |
+| V2.0 | 8-dimension knowledge base + bilingual README + 15 templates + data enhancement | ✅ Complete |
+| **V2.1** | **Auto plan generator + catchment heatmap tool** | ✅ **Complete** |
+| V2.2 | Map API integration, enhanced real-map heatmap | 🔜 Planned |
+| V2.3 | Dynamic knowledge base queries (wenlv-wiki on demand) | 🔜 Planned |
+| V2.4 | Auto SVG zoning map generation (HTML generator) | 🔜 Planned |
+| V3.0 | GIS integration, editable vector layout maps | 🔜 Planned |
 
 ## 📄 License
 
