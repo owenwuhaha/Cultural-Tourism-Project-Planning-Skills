@@ -8,7 +8,7 @@
 [![OpenClaw](https://img.shields.io/badge/OpenClaw-Skill-ff6b6b)](https://github.com/owenwuhaha/Cultural-Tourism-Project-Planning-Skills)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-Ready-9775fa)](https://claude.ai)
 [![Codex](https://img.shields.io/badge/Codex-Ready-4ade80)](https://codex.openai.com)
-[![Version](https://img.shields.io/badge/version-2.1.0-blue)](./SKILL.md)
+[![Version](https://img.shields.io/badge/version-2.2.0-blue)](./SKILL.md)
 [![License](https://img.shields.io/badge/license-MIT-green)](./LICENSE)
 [![Category](https://img.shields.io/badge/category-productivity-orange)](.)
 [![Platform](https://img.shields.io/badge/platform-linux%20%7C%20macos%20%7C%20windows-lightgrey)](.)
@@ -33,10 +33,12 @@
 
 It simulates a **registered cultural tourism planner with 10+ years** of experience, following China's *Tourism Planning General Regulation* (GB/T 18971-2003), with a focus on ROI and project feasibility from the **client's perspective**.
 
-**V2.1 Highlights:**
+**V2.2 Highlights:**
 
 | New Feature | Description |
 |-------------|-------------|
+| 🗺️ **SVG Zoning Map Generator** [`svg-zoning.py`](./scripts/svg-zoning.py) | Interactive input → auto-generate dark-themed HTML zoning map with pie chart, legend, descriptions & capacity estimation |
+| 🎛️ **Planner Toolkit Dashboard** [`planner-toolkit.py`](./scripts/planner-toolkit.py) | Unified interactive menu integrating all tools, one-click launch, view generated files |
 | 🚀 **Auto Plan Generator** [`generate-plan.py`](./scripts/generate-plan.py) | Interactive input → auto-generate 8-module complete Markdown proposal, save locally |
 | 🌐 **Catchment Heatmap Generator** [`catchment-heatmap.py`](./scripts/catchment-heatmap.py) | Generate standalone HTML heatmap (3 concentric rings, 33 Chinese cities data, dark theme) |
 | 📋 **15 Report Templates** | Added business model, immersive tourism, policy funding, land compliance, health retreat templates |
@@ -198,12 +200,14 @@ Ask questions when info is insufficient. Never fabricate data. Stay compliant.
 
 ## 🛠️ Tool Scripts
 
-This repository includes 3 ready-to-run Python scripts:
+This repository includes 5 ready-to-run Python scripts:
 
 | Script | Version | Description | Usage |
 |--------|---------|-------------|-------|
-| [`scripts/generate-plan.py`](./scripts/generate-plan.py) | V2.1 🆕 | **Auto Plan Generator** — Interactive input → 8-module Markdown proposal | `python generate-plan.py` |
-| [`scripts/catchment-heatmap.py`](./scripts/catchment-heatmap.py) | V2.1 🆕 | **Catchment Heatmap** — Standalone HTML heatmap (33 cities data) | `python catchment-heatmap.py` |
+| [`scripts/planner-toolkit.py`](./scripts/planner-toolkit.py) | V2.2 🆕 | **Planner Toolkit Dashboard** — Unified menu integrating all tools | `python planner-toolkit.py` |
+| [`scripts/svg-zoning.py`](./scripts/svg-zoning.py) | V2.2 🆕 | **SVG Zoning Map Generator** — Dark-themed HTML zoning map with pie chart | `python svg-zoning.py` |
+| [`scripts/generate-plan.py`](./scripts/generate-plan.py) | V2.1 | **Auto Plan Generator** — Interactive input → 8-module Markdown proposal | `python generate-plan.py` |
+| [`scripts/catchment-heatmap.py`](./scripts/catchment-heatmap.py) | V2.1 | **Catchment Heatmap** — Standalone HTML heatmap (33 cities data) | `python catchment-heatmap.py` |
 | [`scripts/investment-calc.py`](./scripts/investment-calc.py) | V2.0 | **Investment Calculator** — 3-scenario forecast, 5-layer revenue model | `python investment-calc.py` |
 
 > 📝 All scripts are pure Python standard library — no third-party dependencies required.
@@ -219,16 +223,18 @@ This repository includes 3 ready-to-run Python scripts:
 
 ```
 Cultural-Tourism-Project-Planning-Skills/
-├── SKILL.md                       # Skill definition (14 modules V2.1)
+├── SKILL.md                       # Skill definition (14 modules V2.2)
 ├── README.md                      # Chinese README (default)
 ├── README.en.md                   # English README (via switch link)
 ├── references/
 │   ├── industry-data.md           # Industry data & references (284 lines)
 │   └── report-templates.md        # 15 report templates (975 lines)
 └── scripts/                       # Executable tool scripts
-    ├── generate-plan.py           # Auto plan generator (V2.1 New)
-    ├── catchment-heatmap.py       # Catchment heatmap (V2.1 New)
-    └── investment-calc.py         # Investment calculator (V2.0)
+    ├── planner-toolkit.py           # Planner toolkit dashboard (V2.2 New)
+    ├── svg-zoning.py                # SVG zoning map generator (V2.2 New)
+    ├── generate-plan.py             # Auto plan generator (V2.1)
+    ├── catchment-heatmap.py         # Catchment heatmap (V2.1)
+    └── investment-calc.py           # Investment calculator (V2.0)
 ```
 
 ## 🗺️ Version Roadmap
@@ -238,10 +244,10 @@ Cultural-Tourism-Project-Planning-Skills/
 | V1.0 | 14 modules + guided mode + optimized questions + post-plan output | ✅ Complete |
 | V2.0 | 8-dimension knowledge base + bilingual README + 15 templates + data enhancement | ✅ Complete |
 | **V2.1** | **Auto plan generator + catchment heatmap tool** | ✅ **Complete** |
-| V2.2 | Map API integration, enhanced real-map heatmap | 🔜 Planned |
-| V2.3 | Dynamic knowledge base queries (wenlv-wiki on demand) | 🔜 Planned |
-| V2.4 | Auto SVG zoning map generation (HTML generator) | 🔜 Planned |
-| V3.0 | GIS integration, editable vector layout maps | 🔜 Planned |
+| **V2.2** | **Planner toolkit dashboard + SVG zoning map generator** | ✅ **Complete** |
+| V2.3 | Map API integration, enhanced real-map heatmap | 🔜 Planned |
+| V2.4 | Dynamic knowledge base queries (wenlv-wiki on demand) | 🔜 Planned |
+| V2.5 | Enhanced SVG zoning map (3D view) | 🔜 Planned |
 
 ## 📄 License
 

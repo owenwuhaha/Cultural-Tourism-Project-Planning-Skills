@@ -1,7 +1,7 @@
 ---
 name: cultural-tourism-planner
 description: "文旅策划规划助手 — 面向文旅策划师/景区规划人员/政府文旅部门的专业辅助技能，提供从资源盘点、市场分析到投资测算的全流程策划支持。集成八大知识库维度：政策法规、策划方法论、规划体系、农文旅融合、康养疗愈、运营升级、商业模式、行业趋势。"
-version: 2.1.0
+version: 2.2.0
 author: 疯狂的豇豆 (crazyowen)
 category: productivity
 license: MIT
@@ -627,11 +627,12 @@ metadata:
 |------|---------|------|
 | V1.0 | 14大模块 + 引导模式 + 追问优化 + 方案后续产出 | ✅ 已完成 |
 | V2.0 | 知识库八大维度集成 + README中英文分离 + 配套文件升级 | ✅ 已完成 |
-| **V2.1** | **自动策划脚本(generate-plan.py) + 圈层热力图(catchment-heatmap.py)** | ✅ **已完成** |
-| V2.2 | 接入地图API，自动生成圈层热力图（增强版 + 真实地图） | 🔜 规划中 |
-| V2.3 | 知识库动态查询（按需加载wenlv-wiki） | 🔜 规划中 |
-| V2.4 | 自动出SVG功能分区图（HTML生成器） | 🔜 规划中 |
-| V3.0 | GIS系统集成，输出可编辑矢量布局图 | 🔜 规划中 |
+|| **V2.1** | **自动策划脚本(generate-plan.py) + 圈层热力图(catchment-heatmap.py)** | ✅ **已完成** |
+|| **V2.2** | **策划工具箱总控台(planner-toolkit.py) + SVG功能分区图生成器(svg-zoning.py)** | ✅ **已完成** |
+|| V2.3 | 接入地图API，自动生成圈层热力图（增强版 + 真实地图） | 🔜 规划中 |
+|| V2.4 | 知识库动态查询（按需加载wenlv-wiki） | 🔜 规划中 |
+|| V2.5 | 自动出SVG功能分区图（增强版 + 3D视图） | 🔜 规划中 |
+|| V3.0 | GIS系统集成，输出可编辑矢量布局图 | 🔜 规划中 |
 
 ---
 
@@ -652,7 +653,9 @@ metadata:
   └── scripts/                       # 脚本工具
       ├── investment-calc.py          # 投资测算工具(V2.0)
       ├── generate-plan.py            # 自动策划脚本(V2.1 新增)
-      └── catchment-heatmap.py        # 圈层热力图生成(V2.1 新增)
+      ├── catchment-heatmap.py        # 圈层热力图生成(V2.1 新增)
+      ├── planner-toolkit.py          # 策划工具箱总控台(V2.2 新增)
+      └── svg-zoning.py               # SVG功能分区图生成(V2.2 新增)
   ```
 - **中英文切换机制：** `README.md` 顶部有 `🇬🇧 English → README.en.md` 切换链接，`README.en.md` 顶部有 `🇨🇳 中文 → README.md` 切换链接
 - **同步路径：** Hermes 技能目录 → `f:/owen/hermes/skills-dev/cultural-tourism-planner/`（本地开发版）→ GitHub
