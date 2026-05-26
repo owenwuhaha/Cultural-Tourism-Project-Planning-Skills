@@ -598,7 +598,7 @@ section {
 </section>
 
 <!-- ===== FOOTER ===== -->
-<div class="footer">
+<div id="desktop-footer" class="footer">
   <p>🏔️ 文旅策划规划助手 · <a href="https://github.com/owenwuhaha/Cultural-Tourism-Project-Planning-Skills" target="_blank">GitHub</a></p>
   <p>
     适合 Hermes Agent / OpenClaw / Claude Code / Codex 等AI智能体系统<br>
@@ -621,5 +621,380 @@ section {
   document.querySelectorAll('[data-aos]').forEach(el => observer.observe(el));
 })();
 </script>
+
+<!-- ===== Mobile Detection & Mobile Version ===== -->
+<style id="mobile-styles" media="(max-width: 768px)">
+/* ===== Mobile-First Reset ===== */
+* { box-sizing:border-box; margin:0; padding:0; }
+.wp-ctp-wrapper {
+  font-family: -apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif;
+  color: #1a1a2e;
+  line-height: 1.6;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+.wp-ctp-wrapper img { max-width: 100%; height: auto; }
+
+/* ===== Hero ===== */
+.wp-ctp-hero {
+  background: linear-gradient(135deg, #0a0e17 0%, #1a1f2e 50%, #25152d 100%);
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px 32px;
+  border-radius: 0 0 20px 20px;
+  position: relative;
+  overflow: hidden;
+}
+.wp-ctp-hero::before {
+  content:''; position:absolute;
+  width:200px; height:200px;
+  background: radial-gradient(circle,rgba(240,68,148,.12),transparent 70%);
+  top:-60px; right:-40px;
+  pointer-events:none;
+}
+.wp-ctp-hero::after {
+  content:''; position:absolute;
+  width:150px; height:150px;
+  background: radial-gradient(circle,rgba(0,240,255,.08),transparent 70%);
+  bottom:-40px; left:-30px;
+  pointer-events:none;
+}
+.wp-ctp-hero .badge {
+  display:inline-block; padding:3px 12px;
+  border:1px solid rgba(0,240,255,.3); border-radius:8px;
+  font-size:10px; color:#00f0ff; letter-spacing:1.5px; margin-bottom:12px;
+}
+.wp-ctp-hero h1 {
+  font-size:24px; font-weight:900; margin-bottom:6px;
+  background:linear-gradient(90deg,#fff,#f04494 60%,#00f0ff);
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+.wp-ctp-hero .sub-en { font-size:12px; color:#ffd700; margin-bottom:8px; }
+.wp-ctp-hero .desc { font-size:13px; color:#94a3b8; margin-bottom:16px; }
+.wp-ctp-hero .desc strong { color:#fff; }
+.wp-ctp-btns { display:flex; gap:10px; justify-content:center; flex-wrap:wrap; }
+.wp-ctp-btn {
+  display:inline-flex; align-items:center; gap:4px;
+  padding:10px 22px; border-radius:50px;
+  font-size:13px; font-weight:700; text-decoration:none;
+}
+.wp-ctp-btn-primary {
+  background:linear-gradient(135deg,#f04494,#c02468);
+  color:#fff; box-shadow:0 3px 12px rgba(240,68,148,.3);
+}
+.wp-ctp-btn-outline {
+  border:1.5px solid rgba(255,255,255,.25);
+  color:#e2e8f0;
+}
+
+/* ===== Stats Row ===== */
+.wp-ctp-stats {
+  display:grid; grid-template-columns:repeat(4,1fr);
+  gap:8px; margin-top:20px;
+}
+.wp-ctp-stat { text-align:center; }
+.wp-ctp-stat-num {
+  font-size:22px; font-weight:900;
+  background:linear-gradient(135deg,#f04494,#00f0ff);
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+.wp-ctp-stat-label { font-size:10px; color:#64748b; margin-top:2px; }
+
+/* ===== Section ===== */
+.wp-ctp-section {
+  padding: 28px 16px;
+}
+.wp-ctp-section h2 {
+  font-size:20px; font-weight:800; text-align:center;
+  margin-bottom:4px; color:#1a1a2e;
+}
+.wp-ctp-section .section-sub {
+  text-align:center; font-size:13px; color:#666; margin-bottom:20px;
+}
+.wp-ctp-section.alt { background:#f8f9fb; border-radius:16px; margin:0 12px; }
+
+/* ===== Feature Cards (2 columns on mobile) ===== */
+.wp-ctp-features {
+  display:grid; grid-template-columns:1fr 1fr; gap:10px;
+}
+.wp-ctp-feature {
+  background:#fff; border:1px solid #eef0f4; border-radius:12px;
+  padding:16px 14px; text-align:center;
+  box-shadow:0 1px 4px rgba(0,0,0,.04);
+}
+.wp-ctp-feature .icon { font-size:28px; margin-bottom:6px; }
+.wp-ctp-feature h3 { font-size:13px; font-weight:700; margin-bottom:4px; }
+.wp-ctp-feature p { font-size:11px; color:#666; line-height:1.5; }
+.wp-ctp-feature .tag {
+  display:inline-block; margin-top:8px; padding:1px 8px;
+  border-radius:6px; font-size:10px; font-weight:600;
+  background:rgba(240,68,148,.1); color:#f04494;
+}
+.wp-ctp-feature .tag.new { background:rgba(0,240,255,.1); color:#00b4c5; }
+
+/* ===== Audience Cards ===== */
+.wp-ctp-audience { display:flex; flex-direction:column; gap:10px; }
+.wp-ctp-aud-card {
+  display:flex; align-items:center; gap:14px;
+  background:#fff; border:1px solid #eef0f4; border-radius:12px;
+  padding:14px 16px; box-shadow:0 1px 4px rgba(0,0,0,.03);
+}
+.wp-ctp-aud-card .icon { font-size:28px; flex-shrink:0; }
+.wp-ctp-aud-card .info { flex:1; }
+.wp-ctp-aud-card h3 { font-size:14px; font-weight:700; margin-bottom:2px; }
+.wp-ctp-aud-card p { font-size:12px; color:#666; }
+
+/* ===== Tool List ===== */
+.wp-ctp-tools { display:flex; flex-direction:column; gap:8px; }
+.wp-ctp-tool {
+  display:flex; align-items:center; gap:8px;
+  background:#fff; border:1px solid #eef0f4; border-radius:10px;
+  padding:10px 14px;
+}
+.wp-ctp-tool .name {
+  font-family:'SF Mono','Consolas',monospace; font-size:11px;
+  color:#00b4c5; flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+}
+.wp-ctp-tool .ver {
+  flex-shrink:0; padding:1px 7px; border-radius:6px;
+  font-size:10px; font-weight:600;
+  background:rgba(0,240,255,.1); color:#00b4c5;
+}
+.wp-ctp-tool .ver.latest { background:rgba(240,68,148,.1); color:#f04494; }
+.wp-ctp-tool .desc {
+  font-size:11px; color:#666; flex:0 0 auto;
+  display:none; /* hidden on mobile */
+}
+
+/* ===== KB Tags ===== */
+.wp-ctp-kb {
+  display:grid; grid-template-columns:1fr 1fr; gap:8px;
+}
+.wp-ctp-kb-item {
+  background:#fff; border:1px solid #eef0f4; border-radius:8px;
+  padding:10px; text-align:center; font-size:12px; color:#444;
+}
+
+/* ===== Code Block ===== */
+.wp-ctp-code {
+  background:#1a1f2e; color:#cdd6f4;
+  border-radius:10px; padding:14px; font-size:12px;
+  font-family:'SF Mono','Consolas',monospace; line-height:1.7;
+  overflow-x:auto; white-space:pre; margin-bottom:16px;
+}
+.wp-ctp-code .cmt { color:#6b7280; }
+.wp-ctp-code .prompt { color:#ffd700; }
+
+/* ===== Footer Tags ===== */
+.wp-ctp-tags {
+  display:flex; flex-wrap:wrap; gap:6px; justify-content:center;
+  margin-top:16px;
+}
+.wp-ctp-tag-item {
+  background:#f0f1f4; border-radius:6px; padding:4px 10px;
+  font-size:11px; color:#666;
+}
+.wp-ctp-tag-item a { color:#f04494; text-decoration:none; }
+
+/* ===== Responsive extra: tablets ===== */
+@media (min-width:600px) {
+  .wp-ctp-hero { padding:60px 40px 40px; border-radius:0 0 24px 24px; }
+  .wp-ctp-hero h1 { font-size:32px; }
+  .wp-ctp-hero .desc { font-size:15px; }
+  .wp-ctp-section { padding:36px 24px; max-width:800px; margin:0 auto; }
+  .wp-ctp-section.alt { border-radius:20px; }
+  .wp-ctp-features { grid-template-columns:repeat(3,1fr); gap:16px; }
+  .wp-ctp-feature p { font-size:12px; }
+  .wp-ctp-audience { flex-direction:row; }
+  .wp-ctp-aud-card { flex:1; flex-direction:column; text-align:center; }
+  .wp-ctp-tool .desc { display:inline; flex:initial; }
+  .wp-ctp-tool { flex-wrap:wrap; gap:4px; }
+  .wp-ctp-stats { gap:16px; }
+  .wp-ctp-stat-num { font-size:28px; }
+  .wp-ctp-stat-label { font-size:12px; }
+  .wp-ctp-kb { grid-template-columns:repeat(4,1fr); }
+  .wp-ctp-code { font-size:13px; padding:18px; }
+}
+/* 移动端：桌面版内容隐藏 */
+body.desktop-only { display: none !important; }
+</style>
+
+<style id="desktop-styles" media="(min-width: 769px)">
+/* 桌面端已有一切样式，无需额外操作 */
+</style>
+
+<!-- 移动端版本（默认隐藏，JS检测后显示） -->
+<div id="mobile-version" style="display:none">
+<div class="wp-ctp-wrapper">
+<!-- ===== HERO ===== -->
+<div class="wp-ctp-hero">
+  <div class="badge">⚡ OPEN SOURCE</div>
+  <h1>🏔️ 文旅策划规划助手</h1>
+  <div class="sub-en"><strong>Cultural Tourism Project Planning Skills</strong></div>
+  <div class="desc">面向文旅策划师 / 景区规划人员 / 政府文旅部门的<br><strong>AI赋能全流程策划工具集</strong></div>
+  <div class="wp-ctp-btns">
+    <a class="wp-ctp-btn wp-ctp-btn-primary" href="https://github.com/owenwuhaha/Cultural-Tourism-Project-Planning-Skills" target="_blank">🚀 立即使用</a>
+    <a class="wp-ctp-btn wp-ctp-btn-outline" href="#features">了解更多 ↓</a>
+  </div>
+  <div class="wp-ctp-stats">
+    <div class="wp-ctp-stat"><div class="wp-ctp-stat-num">8</div><div class="wp-ctp-stat-label">AI工具</div></div>
+    <div class="wp-ctp-stat"><div class="wp-ctp-stat-num">33</div><div class="wp-ctp-stat-label">知识库</div></div>
+    <div class="wp-ctp-stat"><div class="wp-ctp-stat-num">V2.6</div><div class="wp-ctp-stat-label">最新版</div></div>
+    <div class="wp-ctp-stat"><div class="wp-ctp-stat-num">8</div><div class="wp-ctp-stat-label">维度</div></div>
+  </div>
+</div>
+
+<!-- ===== FEATURES ===== -->
+<div class="wp-ctp-section" id="features">
+  <h2>💡 它能帮你做什么？</h2>
+  <div class="section-sub">8个AI工具覆盖文旅策划全流程</div>
+  <div class="wp-ctp-features">
+    <div class="wp-ctp-feature">
+      <div class="icon">📊</div>
+      <h3>自动策划方案</h3>
+      <p>输入参数自动生成结构化方案HTML，含市场分析、投资测算</p>
+      <span class="tag">V2.1</span>
+    </div>
+    <div class="wp-ctp-feature">
+      <div class="icon">🗺️</div>
+      <h3>圈层热力图</h3>
+      <p>Leaflet.js+OSM真实地图，24城市坐标，交通圈可视化</p>
+      <span class="tag new">V2.6 🆕</span>
+    </div>
+    <div class="wp-ctp-feature">
+      <div class="icon">📈</div>
+      <h3>投资测算</h3>
+      <p>4模式×4业态×5层收入结构，快速财务可行性分析</p>
+      <span class="tag">V2.0</span>
+    </div>
+    <div class="wp-ctp-feature">
+      <div class="icon">🎯</div>
+      <h3>竞品对标</h3>
+      <p>6维雷达图+气泡矩阵+SWOT，差异化策略建议</p>
+      <span class="tag">V2.3</span>
+    </div>
+    <div class="wp-ctp-feature">
+      <div class="icon">🏗️</div>
+      <h3>分区图绘制</h3>
+      <p>暗色主题SVG分区图，饼图+图例+承载力估算</p>
+      <span class="tag">V2.2</span>
+    </div>
+    <div class="wp-ctp-feature">
+      <div class="icon">📚</div>
+      <h3>知识库+看板</h3>
+      <p>33页动态查询，项目总览看板一键聚合报告</p>
+      <span class="tag">V2.4/5</span>
+    </div>
+  </div>
+</div>
+
+<!-- ===== TOOLS ===== -->
+<div class="wp-ctp-section alt">
+  <h2>🛠️ 8个工具</h2>
+  <div class="section-sub">每个脚本独立可运行，总控台统一调度</div>
+  <div class="wp-ctp-tools">
+    <div class="wp-ctp-tool"><span class="name">project-dashboard.py</span><span class="ver">V2.4</span><span class="desc">项目看板</span></div>
+    <div class="wp-ctp-tool"><span class="name">knowledge-query.py</span><span class="ver">V2.5</span><span class="desc">知识库查询</span></div>
+    <div class="wp-ctp-tool"><span class="name">competitive-analysis.py</span><span class="ver">V2.3</span><span class="desc">竞品分析</span></div>
+    <div class="wp-ctp-tool"><span class="name">catchment-heatmap.py</span><span class="ver latest">V2.6 🆕</span><span class="desc">圈层热力图</span></div>
+    <div class="wp-ctp-tool"><span class="name">planner-toolkit.py</span><span class="ver latest">V2.6</span><span class="desc">总控台</span></div>
+    <div class="wp-ctp-tool"><span class="name">svg-zoning.py</span><span class="ver">V2.2</span><span class="desc">分区图</span></div>
+    <div class="wp-ctp-tool"><span class="name">generate-plan.py</span><span class="ver">V2.1</span><span class="desc">生成方案</span></div>
+    <div class="wp-ctp-tool"><span class="name">investment-calc.py</span><span class="ver">V2.0</span><span class="desc">投资测算</span></div>
+  </div>
+</div>
+
+<!-- ===== AUDIENCE ===== -->
+<div class="wp-ctp-section">
+  <h2>🎯 适合谁用？</h2>
+  <div class="section-sub">个人策划师到政府部门都能用</div>
+  <div class="wp-ctp-audience">
+    <div class="wp-ctp-aud-card">
+      <div class="icon">👨‍💼</div>
+      <div class="info"><h3>文旅策划师</h3><p>快速出初稿，竞品一键生成，汇报效率翻倍</p></div>
+    </div>
+    <div class="wp-ctp-aud-card">
+      <div class="icon">🏛️</div>
+      <div class="info"><h3>景区规划人员</h3><p>客源圈层分析，投资回报测算，科学功能分区</p></div>
+    </div>
+    <div class="wp-ctp-aud-card">
+      <div class="icon">🏢</div>
+      <div class="info"><h3>政府文旅部门</h3><p>规划��证参考，政策通道对照，产业趋势研判</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== KNOWLEDGE BASE ===== -->
+<div class="wp-ctp-section alt">
+  <h2>📖 知识库 8大维度</h2>
+  <div class="section-sub">+ 285行行业数据 · 15个模板 · 圈层参考</div>
+  <div class="wp-ctp-kb">
+    <div class="wp-ctp-kb-item">📋 政策法规</div>
+    <div class="wp-ctp-kb-item">💡 策划方法论</div>
+    <div class="wp-ctp-kb-item">📐 规划体系</div>
+    <div class="wp-ctp-kb-item">🌾 农文旅融合</div>
+    <div class="wp-ctp-kb-item">🌿 康养疗愈</div>
+    <div class="wp-ctp-kb-item">📈 运营升级</div>
+    <div class="wp-ctp-kb-item">💼 商业模式</div>
+    <div class="wp-ctp-kb-item">🔮 行业趋势</div>
+  </div>
+</div>
+
+<!-- ===== CTA ===== -->
+<div class="wp-ctp-section">
+  <h2>🚀 快速开始</h2>
+  <div class="section-sub">零依赖，纯Python，一键运行</div>
+  <div class="wp-ctp-code"><span class="prompt">$</span> git clone https://github.com/owenwuhaha/Cultural-Tourism-Project-Planning-Skills.git
+<span class="prompt">$</span> cd Cultural-Tourism-Project-Planning-Skills/scripts
+<span class="cmt"># 启动总控台</span>
+<span class="prompt">$</span> python planner-toolkit.py
+
+<span class="cmt"># 或直接运行单个工具</span>
+<span class="prompt">$</span> python generate-plan.py
+<span class="prompt">$</span> python catchment-heatmap.py --demo
+<span class="prompt">$</span> python competitive-analysis.py</div>
+  <div class="wp-ctp-btns">
+    <a class="wp-ctp-btn wp-ctp-btn-primary" href="https://github.com/owenwuhaha/Cultural-Tourism-Project-Planning-Skills" target="_blank">⭐ GitHub 仓库</a>
+    <a class="wp-ctp-btn wp-ctp-btn-outline" style="border-color:#f04494;color:#f04494" href="https://github.com/owenwuhaha/Cultural-Tourism-Project-Planning-Skills/releases/tag/v2.6.0" target="_blank">📦 查看 Release</a>
+  </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div class="wp-ctp-section alt" style="text-align:center;padding-bottom:20px;margin-bottom:16px">
+  <div class="wp-ctp-tags">
+    <span class="wp-ctp-tag-item">🤖 Hermes Agent</span>
+    <span class="wp-ctp-tag-item">OpenClaw Skills</span>
+    <span class="wp-ctp-tag-item">Claude Code</span>
+    <span class="wp-ctp-tag-item">AI ⚡ 智能体</span>
+  </div>
+  <div style="font-size:12px;color:#999;margin-top:10px">
+    开源协议：MIT · 由 <a href="https://www.crazyowen.cn" style="color:#f04494;text-decoration:none">疯狂的豇豆</a> 开发维护
+  </div>
+</div>
+</div>
+</div>
+
+<script>
+(function() {
+  'use strict';
+  function isMobile() {
+    return window.innerWidth <= 768 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile/i.test(navigator.userAgent);
+  }
+
+  if (isMobile()) {
+    var mobileEl = document.getElementById('mobile-version');
+    if (mobileEl) mobileEl.style.display = 'block';
+    // 隐藏桌面版全部主内容（section + .footer + .orb + particles-canvas）
+    document.querySelectorAll('section').forEach(function(el) { el.style.display = 'none'; });
+    document.getElementById('desktop-footer').style.display = 'none';
+    document.querySelectorAll('.orb').forEach(function(el) { el.style.display = 'none'; });
+    var canvas = document.getElementById('particles-canvas');
+    if (canvas) canvas.style.display = 'none';
+  }
+})();
+</script>
+
 </body>
 </html>
