@@ -287,6 +287,19 @@ Cultural-Tourism-Project-Planning-Skills/
 | V2.7 | 接入地图API增强 | 🔜 规划中 |
 | V3.0 | GIS系统集成 + 增强SVG分区图 | 🔜 规划中 |
 
+---
+
+## ☕ 赞赏支持
+
+如果这个小程序对你有所帮助，欢迎请作者喝杯咖啡 ☕
+
+<div align="center">
+
+| 微信赞赏 | 支付宝赞赏 |
+|:---:|:---:|
+| ![微信](https://github.com/owenwuhaha/life-script-generator/blob/main/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260520093343_5_13.png) | ![支付宝](https://github.com/owenwuhaha/life-script-generator/blob/main/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260520093414_6_13.jpg) |
+
+**你的支持是持续迭代的动力 ❤️**
 ## 📄 许可证
 
 MIT © 2025 [吴晓 (crazyowen)](https://github.com/crazyowen)
